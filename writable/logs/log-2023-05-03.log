@@ -1,0 +1,538 @@
+ERROR - 2023-05-03 03:11:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-03 03:13:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-03 03:15:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-03 03:15:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-03 03:16:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Projek\WebInvetoryCI4\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Projek\WebInvetoryCI4\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Projek\WebInvetoryCI4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Projek\WebInvetoryCI4\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2023-05-03 03:51:11 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:51:32 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:54:14 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:54:16 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:54:17 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:54:18 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:54:19 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:56:06 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:56:09 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:56:49 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 03:56:59 --> Call to undefined method CodeIgniter\View\View::rederSection()
+in APPPATH\Views\main\layout.php on line 111.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main/layout', [], true)
+ 4 APPPATH\Controllers\Main.php(11): view('main/layout')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Main->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 08:56:06 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 08:57:26 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:00:00 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:00:02 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:00:05 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:00:14 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:00:23 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:01:00 --> Undefined variable $book
+in APPPATH\Views\kategori\viewkategori.php on line 35.
+ 1 APPPATH\Views\kategori\viewkategori.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $book', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 5 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:01:53 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 33.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 09:02:17 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kategori\viewkategori.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 4 APPPATH\Controllers\Kategori.php(19): view('kategori/viewkategori', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 11:59:53 --> Attempt to read property "katnama" on array
+in APPPATH\Views\kategori\viewkategori.php on line 32.
+ 1 APPPATH\Views\kategori\viewkategori.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "katnama" on array', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 5 APPPATH\Controllers\Kategori.php(17): view('kategori/viewkategori', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 12:11:29 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ka...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Kategori.php(88): CodeIgniter\BaseModel->delete()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Kategori->delete('1')
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 12:11:29 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `kategori`
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `kategori`
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `kategori`
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `kategori`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Kategori.php(88): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 12:11:50 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ka...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Kategori.php(88): CodeIgniter\BaseModel->delete()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Kategori->delete('2')
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 12:11:50 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `kategori`
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `kategori`
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `kategori`
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `kategori`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(456): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Kategori.php(88): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->delete('2')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 12:22:54 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Kategori.php(48): CodeIgniter\BaseModel->first()
+#7 D:\Projek\WebInvetoryCI4\app\Controllers\Kategori.php(33): App\Controllers\Kategori->data_add(Array)
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Kategori->store()
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#10 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#13 {main}
+CRITICAL - 2023-05-03 12:22:54 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `kategori`
+WHERE `id` = 3
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kategori`
+WHERE `id` = 3
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kategori`
+WHERE `id` = 3
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kategori`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Kategori.php(48): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Kategori.php(33): App\Controllers\Kategori->data_add([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 12:55:58 --> Undefined variable $row
+in APPPATH\Views\kategori\viewkategori.php on line 115.
+ 1 APPPATH\Views\kategori\viewkategori.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php', 115)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\kategori\\viewkategori.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kategori/viewkategori', [], true)
+ 5 APPPATH\Controllers\Kategori.php(17): view('kategori/viewkategori', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kategori->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 13:12:35 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Satuan.php(89): CodeIgniter\Model->update('3', [...])
+ 4 APPPATH\Controllers\Satuan.php(38): App\Controllers\Satuan->data_update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Satuan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 13:13:01 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Satuan.php(89): CodeIgniter\Model->update('3', [...])
+ 4 APPPATH\Controllers\Satuan.php(38): App\Controllers\Satuan->data_update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Satuan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 13:13:31 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Satuan.php(89): CodeIgniter\Model->update(2, [...])
+ 4 APPPATH\Controllers\Satuan.php(38): App\Controllers\Satuan->data_update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Satuan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Satuan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
