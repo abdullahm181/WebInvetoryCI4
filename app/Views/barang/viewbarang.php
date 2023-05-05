@@ -28,6 +28,7 @@ Management Data Barang
       <th>Kode</th>
       <th>Harga</th>
       <th>Stok</th>
+      <th>Lokasi</th>
       <th style="width: 15%;">Aksi</th>
     </tr>
   </thead>
@@ -36,13 +37,18 @@ Management Data Barang
     foreach ($tampildata as $row) : ?>
       <tr>
         <td><?= $nomor++; ?></td>
-        <td><?= $row['brggambar']; ?></td>
+        <td>
+          <?php if($row['brggambar']!='' || $row['brggambar']!=null): ?>
+          <img src="<?= '../uploads/'. $row['brggambar'] ?>" width="auto" height="80"/>
+          <?php endif; ?>
+      </td>
         <td><?= $row['brgnama']; ?></td>
         <td><?= $row['brgkatid']; ?></td>
         <td><?= $row['brgsatid']; ?></td>
         <td><?= $row['brgkode']; ?></td>
         <td><?= $row['brgharga']; ?></td>
         <td><?= $row['brgstok']; ?></td>
+        <td><?= $row['brglokid']; ?></td>
         <td>
           <button class="btn btn-warning" onclick="edit_data(<?= $row['brgid']; ?>)">Edit</button>
           <button class="btn btn-danger" onclick="delete_data(<?= $row['brgid']; ?>)">Delete</button>
@@ -73,6 +79,12 @@ Management Data Barang
 
           <div class="form-body">
             <div class="form-group">
+              <label class="control-label col-md-3">Kode Barang</label>
+              <div class="col-md-9">
+                <input name="brgkode" id="brgkode" placeholder="Kode Barang" class="form-control" type="text" readonly>
+              </div>
+            </div>
+            <div class="form-group">
               <label class="control-label col-md-3">Nama Barang</label>
               <div class="col-md-9">
                 <input name="brgnama" id="brgnama" placeholder="Nama Barang" class="form-control" type="text" required>
@@ -82,7 +94,7 @@ Management Data Barang
               <label class="control-label col-md-3">Pilih Kategori</label>
               <div class="col-md-9">
                 <select name="brgkatid" id="brgkatid" class="form-control" required>
-                  <option selected value="">=pilih=</option>
+          
                 </select>
               </div>
             </div>
@@ -90,7 +102,15 @@ Management Data Barang
               <label class="control-label col-md-3">Pilih Satuan</label>
               <div class="col-sm-9">
                 <select name="brgsatid" id="brgsatid" class="form-control" required>
-                  <option selected value="">=pilih=</option>
+
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3">Pilih Lokasi</label>
+              <div class="col-sm-9">
+                <select name="brglokid" id="brglokid" class="form-control" required>
+                  
                 </select>
               </div>
             </div>
@@ -152,13 +172,29 @@ Management Data Barang
   function add_data() {
 
     $('#addBarang')[0].reset();
+    init_modal(true,null)
+    $('#modal_form').modal('show'); // show bootstrap modal
+    //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+  }
+
+  function init_modal(isAdd = true,data) {
+    $('#preview').empty();
     $.ajax({
       url: "<?php echo site_url('kategori/get_all'); ?>",
       type: "GET",
       dataType: 'json',
       success: function(result) {
+        $('#brgkatid').empty();
+        $('#brgkatid').append(`<option ${isAdd?'selected':''} value="" disabled>=pilih=</option>`);
         $.each(result, function(i, value) {
-          $('#brgkatid').append('<option value=' + value.katid + '>' + value.katnama + '</option>');
+          if(isAdd==false){
+            if (value.katid == data.brgkatid)
+            $('#brgkatid').append('<option value=' + value.katid + ' selected>' + value.katnama + '</option>');
+          else
+            $('#brgkatid').append('<option value=' + value.katid + '>' + value.katnama + '</option>');
+          }else
+            $('#brgkatid').append('<option value=' + value.katid + '>' + value.katnama + '</option>');
+          
         });
       }
     });
@@ -167,14 +203,41 @@ Management Data Barang
       type: "GET",
       dataType: 'json',
       success: function(result) {
+        $('#brgsatid').empty();
+        $('#brgsatid').append(`<option  ${isAdd?'selected':''} value="" disabled>=pilih=</option>`);
         $.each(result, function(i, value) {
-          $('#brgsatid').append('<option value=' + value.satid + '>' + value.satnama + '</option>');
+          if(isAdd==false){
+            if (value.satid == data.brgsatid )
+            $('#brgsatid').append('<option value=' + value.satid + ' //selected>' + value.satnama + '</option>');
+          else
+            $('#brgsatid').append('<option value=' + value.satid + '>' + value.satnama + '</option>');
+          }else
+            $('#brgsatid').append('<option value=' + value.satid + '>' + value.satnama + '</option>');
+          
         });
       }
     });
-    $('#modal_form').modal('show'); // show bootstrap modal
-    //$('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+    $.ajax({
+      url: "<?php echo site_url('lokasi/get_all'); ?>",
+      type: "GET",
+      dataType: 'json',
+      success: function(result) {
+        $('#brglokid').empty();
+        $('#brglokid').append(`<option  ${isAdd?'selected':''} value="" disabled>=pilih=</option>`);
+        $.each(result, function(i, value) {
+          if(isAdd==false){
+            if (value.lokid == data.brglokid )
+            $('#brglokid').append('<option value=' + value.lokid + ' selected>' + value.loklorong + ' - ' + value.lokrak + '</option>');
+          else
+            $('#brglokid').append('<option value=' + value.lokid + '>' + value.loklorong + ' - ' + value.lokrak + '</option>');
+          }else
+            $('#brglokid').append('<option value=' + value.lokid + '>' + value.loklorong + ' - ' + value.lokrak + '</option>');
+          
+        });
+      }
+    });
   }
+
   $("#addBarang").submit(function(form) {
 
     //form.preventDefault();
@@ -240,8 +303,21 @@ Management Data Barang
       type: "GET",
       dataType: "JSON",
       success: function(data) {
+        init_modal(false,data)
+        $('#brgstok').prop('readonly', true);
+        //$('[name="brgkode"]').hide();
         $('[name="brgid"]').val(data.data.brgid);
         $('[name="brgnama"]').val(data.data.brgnama);
+        $('[name="brgstok"]').val(data.data.brgstok);
+        $('[name="brgkatid"]').val(data.data.brgkatid);
+        $('[name="brgsatid"]').val(data.data.brgsatid);
+        $('[name="brgkode"]').val(data.data.brgkode);
+        $('[name="brgharga"]').val(data.data.brgharga);
+        //$('[name="brggambar"]').val(data.data.brggambar);
+        $('[name="brglokid"]').val(data.data.brglokid);
+        if (data.data.brggambar != '' && data.data.brggambar!=null) {
+          $('#preview').html('<img src="../uploads/' + data.data.brggambar + '" width="auto" height="200"/>');
+        }
         $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
         $('.modal-title').text('Edit data'); // Set title to Bootstrap modal title
       },

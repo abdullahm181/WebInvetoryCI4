@@ -1,0 +1,865 @@
+CRITICAL - 2023-05-04 01:50:37 --> Undefined array key "brglokid"
+in APPPATH\Views\barang\viewbarang.php on line 47.
+ 1 APPPATH\Views\barang\viewbarang.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brglokid"', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(16): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 02:37:11 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Barang.php on line 129.
+ 1 APPPATH\Controllers\Barang.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->delete('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 02:37:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Barang.php on line 129.
+ 1 APPPATH\Controllers\Barang.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->delete('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 02:38:10 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Barang.php on line 127.
+ 1 APPPATH\Controllers\Barang.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->delete('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 02:57:37 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Barang.php on line 137.
+ 1 APPPATH\Controllers\Barang.php(62): App\Controllers\Barang->delete_image('1683167926_3443313cc9a30020d780.png')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-04 02:58:48 --> mysqli_sql_exception: Column 'brgnama' cannot be null in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ba...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\app\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(75): App\Models\Modelbarang->insert_data(Array)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(54): App\Controllers\Barang->data_add(Array)
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->store()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-04 02:58:48 --> Column 'brgnama' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`, `brglokid`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`, `brglokid`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`, `brglokid`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`, `brglokid`) VALUES (:brgid:, :brgnama:, :brgkatid:, :brgsatid:, :brgharga:, :brggambar:, :brgkode:, :brgstok:, :brglokid:)', [...], false)
+ 5 APPPATH\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Barang.php(75): App\Models\Modelbarang->insert_data([...])
+ 7 APPPATH\Controllers\Barang.php(54): App\Controllers\Barang->data_add([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:13:14 --> Too few arguments to function App\Controllers\Barang::delete_image(), 0 passed in D:\Projek\WebInvetoryCI4\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Barang.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->delete_image()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:13:30 --> Too few arguments to function App\Controllers\Barang::delete_image(), 0 passed in D:\Projek\WebInvetoryCI4\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Barang.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->delete_image()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:23:52 --> unlink(): http does not allow unlinking
+in APPPATH\Controllers\Barang.php on line 151.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): http does not allow unlinking', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 151)
+ 2 APPPATH\Controllers\Barang.php(151): unlink('http://localhost:8080/public/uploads/1683170407_ad7330bbf43ed02bac0b.jpeg')
+ 3 APPPATH\Controllers\Barang.php(62): App\Controllers\Barang->delete_image('1683170407_ad7330bbf43ed02bac0b.jpeg')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:28:52 --> unlink(/public/uploads/1683170888_371ad13e278e2acf41d6.jpeg): No such file or directory
+in APPPATH\Controllers\Barang.php on line 152.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(/public/uploads/1683170888_371ad13e278e2acf41d6.jpeg): No such file or directory', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 152)
+ 2 APPPATH\Controllers\Barang.php(152): unlink('/public/uploads/1683170888_371ad13e278e2acf41d6.jpeg')
+ 3 APPPATH\Controllers\Barang.php(62): App\Controllers\Barang->delete_image('1683170888_371ad13e278e2acf41d6.jpeg')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:31:33 --> unlink(D:\Projek\WebInvetoryCI4\publicuploads/1683170888_371ad13e278e2acf41d6.jpeg): No such file or directory
+in APPPATH\Controllers\Barang.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\Projek\\WebInvetoryCI4\\publicuploads/1683170888_371ad13e278e2acf41d6.jpeg): No such file or directory', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 153)
+ 2 APPPATH\Controllers\Barang.php(153): unlink('D:\\Projek\\WebInvetoryCI4\\publicuploads/1683170888_371ad13e278e2acf41d6.jpeg')
+ 3 APPPATH\Controllers\Barang.php(62): App\Controllers\Barang->delete_image('1683170888_371ad13e278e2acf41d6.jpeg')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 03:33:53 --> unlink(D:\Projek\WebInvetoryCI4\public/uploads/): Is a directory
+in APPPATH\Controllers\Barang.php on line 155.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\Projek\\WebInvetoryCI4\\public/uploads/): Is a directory', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 155)
+ 2 APPPATH\Controllers\Barang.php(155): unlink('D:\\Projek\\WebInvetoryCI4\\public/uploads/')
+ 3 APPPATH\Controllers\Barang.php(62): App\Controllers\Barang->delete_image(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-04 04:15:07 --> mysqli_sql_exception: Unknown column 'lokid' in 'where clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(45): CodeIgniter\BaseModel->first()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->store()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-04 04:15:07 --> Unknown column 'lokid' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+WHERE `lokid` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+WHERE `lokid` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+WHERE `lokid` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+WHERE `lokid` = :lokid:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Barang.php(45): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:16:28 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Barang.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:17:26 --> Object of class mysqli could not be converted to int
+in APPPATH\Controllers\Barang.php on line 55.
+ 1 APPPATH\Controllers\Barang.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Object of class mysqli could not be converted to int', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:18:23 --> Object of class mysqli could not be converted to int
+in APPPATH\Controllers\Barang.php on line 56.
+ 1 APPPATH\Controllers\Barang.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Object of class mysqli could not be converted to int', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:19:43 --> Object of class mysqli could not be converted to int
+in APPPATH\Controllers\Barang.php on line 56.
+ 1 APPPATH\Controllers\Barang.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Object of class mysqli could not be converted to int', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:23:01 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:23:18 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:25:46 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:26:10 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:26:13 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:26:32 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:26:42 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:30:53 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:31:17 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:34:47 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 42.
+ 1 APPPATH\Views\barang\viewbarang.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:35:24 --> Undefined array key 1
+in APPPATH\Views\barang\viewbarang.php on line 41.
+ 1 APPPATH\Views\barang\viewbarang.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(17): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:45:21 --> Array to string conversion
+in APPPATH\Controllers\Barang.php on line 52.
+ 1 APPPATH\Controllers\Barang.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:45:29 --> Array to string conversion
+in APPPATH\Controllers\Barang.php on line 52.
+ 1 APPPATH\Controllers\Barang.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:46:05 --> Array to string conversion
+in APPPATH\Controllers\Barang.php on line 52.
+ 1 APPPATH\Controllers\Barang.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:55:49 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Barang.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 04:57:01 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Barang.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 08:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 08:00:40 --> "require" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('require')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('usernama', 'Usernama', '', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Auth.php(21): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 08:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 08:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 08:58:20 --> Call to undefined method App\Models\Modelauth::row
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Model->__call('row', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:02:52 --> Call to undefined method App\Models\Modelauth::row
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('row', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aaa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:05:50 --> Call to undefined method App\Models\Modelauth::getRow
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aaa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:06:06 --> Call to undefined method App\Models\Modelauth::getRow
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:07:02 --> Call to undefined method App\Models\Modelauth::getRow
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:07:15 --> Call to undefined method App\Models\Modelauth::getRow
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:07:38 --> Call to undefined method App\Models\Modelauth::row
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('row', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:08:17 --> Call to undefined method App\Models\Modelauth::getFirstRow
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Modelauth.php(22): CodeIgniter\Model->__call('getFirstRow', [])
+ 2 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aa')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:09:16 --> Undefined array key "userpassword"
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userpassword"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:10:13 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:11:28 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Models\Modelauth.php on line 22.
+ 1 APPPATH\Controllers\Auth.php(43): App\Models\Modelauth->get_by_usernama('aaaa')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:14:33 --> Undefined array key "userpassword"
+in APPPATH\Controllers\Auth.php on line 52.
+ 1 APPPATH\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userpassword"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:17:45 --> Undefined array key "userpassword"
+in APPPATH\Controllers\Auth.php on line 53.
+ 1 APPPATH\Controllers\Auth.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userpassword"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:18:20 --> Undefined array key "userpassword"
+in APPPATH\Controllers\Auth.php on line 53.
+ 1 APPPATH\Controllers\Auth.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userpassword"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:18:46 --> Undefined array key "userpassword"
+in APPPATH\Controllers\Auth.php on line 53.
+ 1 APPPATH\Controllers\Auth.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userpassword"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:23:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 53.
+ 1 APPPATH\Controllers\Auth.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:24:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:24:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:25:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:25:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:26:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:26:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:28:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 54.
+ 1 APPPATH\Controllers\Auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:33:57 --> Undefined property: App\Controllers\Auth::$db
+in APPPATH\Controllers\Auth.php on line 43.
+ 1 APPPATH\Controllers\Auth.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Auth::$db', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:43:56 --> Attempt to read property "password" on array
+in APPPATH\Controllers\Auth.php on line 47.
+ 1 APPPATH\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on array', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-04 09:44:38 --> Attempt to read property "userpassword" on array
+in APPPATH\Controllers\Auth.php on line 47.
+ 1 APPPATH\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "userpassword" on array', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:44:52 --> Attempt to read property "userpassword" on array
+in APPPATH\Controllers\Auth.php on line 47.
+ 1 APPPATH\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "userpassword" on array', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 09:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 09:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-04 09:45:22 --> Undefined array key 0
+in APPPATH\Controllers\Auth.php on line 47.
+ 1 APPPATH\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Auth.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 11:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-04 11:26:09 --> mysqli_sql_exception: Table 'inventoryweb_ci4.users' doesn't exist in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Auth.php(44): CodeIgniter\BaseModel->first()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-04 11:26:09 --> Table 'inventoryweb_ci4.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(44): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 11:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-04 11:29:04 --> mysqli_sql_exception: Unknown column 'email' in 'where clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Auth.php(44): CodeIgniter\BaseModel->first()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-04 11:29:04 --> Unknown column 'email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = \'admin\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Auth.php(44): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->cekUser()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-04 11:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 11:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-04 12:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

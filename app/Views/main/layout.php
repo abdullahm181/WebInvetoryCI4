@@ -63,7 +63,9 @@
             <img src="<?= base_url() ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Administrator</a>
+            <a href="#" class="d-block">
+              <?= session()->get('usernama'); ?>
+            </a>
           </div>
         </div>
 
@@ -75,25 +77,8 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-header">Master</li>
-            <li class="nav-item">
-              <a href="<?= site_url('kategori/index') ?>"  class="nav-link">
-                <i class="nav-icon far fa fa-tasks"></i>
-                <p class="text">Kategori</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= site_url('satuan/index'); ?>" class="nav-link">
-                <i class="nav-icon far fa fa-tasks"></i>
-                <p class="text">Satuan</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= site_url('barang/index'); ?>" class="nav-link">
-                <i class="nav-icon far fa fa-tasks"></i>
-                <p class="text">Barang</p>
-              </a>
-            </li>
+               <?= $this->include('main/sidebar') ?>
+            
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -176,6 +161,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.2.0/html5-qrcode.min.js'></script>
 
 <?= $this->renderSection('javascript') ?>
 </body>

@@ -16,7 +16,7 @@ class Barang extends Migration
             ],
             'brgkode' => [
                 'type' => 'char',
-                'constraint' => '10',
+                'constraint' => '14',
                 'null' => TRUE,
             ],
             'brgnama' => [
@@ -26,6 +26,11 @@ class Barang extends Migration
             'brgkatid' => [
                 'type' => 'int',
                 'unsigned' => true
+            ],
+            'brglokid' => [
+                'type' => 'int',
+                'unsigned' => true,
+                'null'=>TRUE,
             ],
             'brgsatid' => [
                 'type' => 'int',

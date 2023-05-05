@@ -21,6 +21,9 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'filterAdmin' => \App\Filters\FilterAdmin::class,
+        'filterKaryawan' => \App\Filters\FilterKaryawan::class,
+        'filterPemilik' => \App\Filters\FilterPemilik::class,
     ];
 
     /**
@@ -32,8 +35,48 @@ class Filters extends BaseConfig
             // 'honeypot',
             //'csrf',
             // 'invalidchars',
+            'filterAdmin'=>[
+                'except'=>['auth/*','auth','/']
+            ],'filterKaryawan'=>[
+                'except'=>['auth/*','auth','/']
+            ],'filterPemilik'=>[
+                'except'=>['auth/*','auth','/']
+            ]
         ],
         'after' => [
+            'filterAdmin'=>[
+                'except' => [
+                    'login', 'login/*',
+                    'main', 'main/*',
+                    'lokasi', 'lokasi/*',
+                    'barang', 'barang/*',
+                    'barangkeluar', 'barangkeluar/*',
+                    'barangmasuk', 'barangmasuk/*',
+                    'kategori', 'kategori/*',
+                    'laporan', 'laporan/*',
+                    'pelanggan', 'pelanggan/*',
+                    'satuan', 'satuan/*',
+                    'utility', 'utility/*',
+                    'users', 'users/*',
+                ]
+            ],
+            'filterKaryawan'=>[
+                'except' => [
+                    'login', 'login/*',
+                    'main', 'main/*',
+                    'barangkeluar', 'barangkeluar/*',
+                    'barangmasuk', 'barangmasuk/*',
+                ]
+            ],
+            'filterPemilik'=>[
+                'except' => [
+                    'login', 'login/*',
+                    'main', 'main/*',
+                    'barangkeluar', 'barangkeluar/*',
+                    'barangmasuk', 'barangmasuk/*',
+                    'laporan', 'laporan/*',
+                ]
+            ],
             'toolbar',
             // 'honeypot',
             // 'secureheaders',
