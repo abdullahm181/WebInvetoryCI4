@@ -17,6 +17,7 @@ class Barang extends Migration
             'brgkode' => [
                 'type' => 'char',
                 'constraint' => '10',
+                'null' => TRUE,
             ],
             'brgnama' => [
                 'type' => 'varchar',
@@ -33,15 +34,19 @@ class Barang extends Migration
             'brgharga' => [
                 'type' => 'double',
             ],
+            'brgstok' => [
+                'type' => 'double',
+            ],
             'brggambar' => [
                 'type' => 'varchar',
-                'constraint' => 200
-            ]
+                'constraint' => 200,
+                'null' => TRUE,
+            ],
         ]);
  
         $this->forge->addPrimaryKey('brgid');
-        $this->forge->addForeignKey('brgkatid', 'kategori', 'katid');
-        $this->forge->addForeignKey('brgsatid', 'satuan', 'satid');
+        // $this->forge->addForeignKey('brgkatid', 'kategori', 'katid');
+        // $this->forge->addForeignKey('brgsatid', 'satuan', 'satid');
  
         $this->forge->createTable('barang');
     }

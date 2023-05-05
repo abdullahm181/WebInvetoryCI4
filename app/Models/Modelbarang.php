@@ -9,7 +9,7 @@ class Modelbarang extends Model
     protected $table            = 'barang';
     protected $primaryKey       = 'brgid';
 
-    protected $allowedFields    = ['brgid','brgkatid', 'brgsatid', 'brgnama', 'brgkode', 'brgharga', 'brggambar'];
+    protected $allowedFields    = ['brgid','brgkatid', 'brgsatid', 'brgnama', 'brgkode', 'brgharga', 'brggambar','brgstok'];
 
     public function __construct() {
         parent::__construct();
@@ -27,5 +27,9 @@ class Modelbarang extends Model
         {
             return false;
         }
+    }
+
+    public function tampil_data(){
+        return $this->table('barang')->join('kategori','brgkatid=katid')->join('satuan','brgsatid=satid')->get();
     }
 }

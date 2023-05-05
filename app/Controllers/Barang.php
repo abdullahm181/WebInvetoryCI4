@@ -15,35 +15,51 @@ class Barang extends BaseController
         ];
         return view('barang/viewbarang', $data);
     }
-    public function store(){
+    
+    public function store()
+    {
         helper(['form', 'url']);
-           
+
         $model = new Modelbarang();
 
-        $storeTyp='Add';
-        $result=false;
-          
+        $storeTyp = 'Add';
+        $result = false;
+
         $data = [
             'brgid' => $this->request->getVar('brgid'),
             'brgnama'  => $this->request->getVar('brgnama'),
-            'brgkatid'=>$this->request->getVar('brgkatid'),
-            'brgsatid'=>$this->request->getVar('brgsatid'),
-            'brgharga'=>$this->request->getVar('brgharga'),
-            'brggambar'=>$this->request->getVar('brggambar'),
-            'brgkode'=>$this->request->getVar('brgkode')
-            ];
-        if($data['brgid']==0 || $data['brgid']==null ){
-            //add
-            $data=$this->data_add($data);
-            if($data!=null) $result=true;
+            'brgkatid' => $this->request->getVar('brgkatid'),
+            'brgsatid' => $this->request->getVar('brgsatid'),
+            'brgharga' => $this->request->getVar('brgharga'),
+            'brggambar' => null,
+            'brgkode' => $this->request->getVar('brgkode'),
+            'brgstok' => $this->request->getVar('brgstok')
+        ];
+        if ($data['brgid'] == 0 || $data['brgid'] == null) {
+            if ($file = $this->request->getFile('brggambar')) {
+                if ($file->isValid() && !$file->hasMoved()) {
+                    // Get file name and extension
+                    $name = $file->getName();
+                    $ext = $file->getClientExtension();
 
-        }else{
+                    // Get random file name
+                    $newName = $file->getRandomName();
+
+                    // Store file in public/uploads/ folder
+                    $file->move('../public/uploads', $newName);
+                    $data['brggambar']=$newName;
+                }
+            }
+
+            $data = $this->data_add($data);
+            if ($data != null) $result = true;
+        } else {
             //update
-            $storeTyp='Update';
-            $data=$this->data_update($data);
-            if($data!=null) $result=true;
+            $storeTyp = 'Update';
+            $data = $this->data_update($data);
+            if ($data != null) $result = true;
         }
-        echo json_encode(array("status" => $result, 'data' => $data,'pesan'=>$storeTyp));
+        echo json_encode(array("status" => $result, 'data' => $data, 'pesan' => $storeTyp));
     }
     public function data_add($data)
     {

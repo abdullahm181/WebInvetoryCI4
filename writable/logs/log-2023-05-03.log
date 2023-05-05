@@ -536,3 +536,282 @@ in SYSTEMPATH\BaseModel.php on line 924.
  7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 13:58:32 --> mysqli_sql_exception: Unknown column 'brgid' in 'order clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->index()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 13:58:32 --> Unknown column 'brgid' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Barang.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 13:58:54 --> mysqli_sql_exception: Unknown column 'brgid' in 'order clause' in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->index()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 13:58:54 --> Unknown column 'brgid' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+ORDER BY `brgid` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Barang.php(14): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 14:59:19 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/fileUpload', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:01:05 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/fileUpload', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:02:51 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/fileUpload', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:05:22 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/fileUpload', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:15:19 --> Undefined property: CodeIgniter\View\View::$security
+in APPPATH\Views\barang\viewbarang.php on line 65.
+ 1 APPPATH\Views\barang\viewbarang.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$security', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(16): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:19:23 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/fileUpload', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:39:11 --> Undefined array key "gambar"
+in APPPATH\Controllers\Barang.php on line 74.
+ 1 APPPATH\Controllers\Barang.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gambar"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:39:27 --> Undefined array key "gambar"
+in APPPATH\Controllers\Barang.php on line 74.
+ 1 APPPATH\Controllers\Barang.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gambar"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:39:49 --> Undefined array key "brggambar"
+in APPPATH\Controllers\Barang.php on line 74.
+ 1 APPPATH\Controllers\Barang.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brggambar"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:40:02 --> Undefined array key "brggambar"
+in APPPATH\Controllers\Barang.php on line 74.
+ 1 APPPATH\Controllers\Barang.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brggambar"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:40:06 --> Undefined array key "brggambar"
+in APPPATH\Controllers\Barang.php on line 74.
+ 1 APPPATH\Controllers\Barang.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brggambar"', 'D:\\Projek\\WebInvetoryCI4\\app\\Controllers\\Barang.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 15:45:15 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 306.
+ 1 SYSTEMPATH\Security\Security.php(306): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(55): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('barang/store', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 15:50:17 --> mysqli_sql_exception: Column 'brggambar' cannot be null in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ba...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\app\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(102): App\Models\Modelbarang->insert_data(Array)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(87): App\Controllers\Barang->data_add(Array)
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->store()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 15:50:17 --> Column 'brggambar' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'0\', NULL, NULL, \'0\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'0\', NULL, NULL, \'0\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'0\', NULL, NULL, \'0\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (:brgid:, :brgnama:, :brgkatid:, :brgsatid:, :brgharga:, :brggambar:, :brgkode:, :brgstok:)', [...], false)
+ 5 APPPATH\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Barang.php(102): App\Models\Modelbarang->insert_data([...])
+ 7 APPPATH\Controllers\Barang.php(87): App\Controllers\Barang->data_add([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 15:55:09 --> mysqli_sql_exception: Column 'brgkode' cannot be null in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ba...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\app\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(101): App\Models\Modelbarang->insert_data(Array)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(87): App\Controllers\Barang->data_add(Array)
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->store()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 15:55:09 --> Column 'brgkode' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129309_08dab45d361dbb4e897c.png\', NULL, \'50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129309_08dab45d361dbb4e897c.png\', NULL, \'50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129309_08dab45d361dbb4e897c.png\', NULL, \'50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (:brgid:, :brgnama:, :brgkatid:, :brgsatid:, :brgharga:, :brggambar:, :brgkode:, :brgstok:)', [...], false)
+ 5 APPPATH\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Barang.php(101): App\Models\Modelbarang->insert_data([...])
+ 7 APPPATH\Controllers\Barang.php(87): App\Controllers\Barang->data_add([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+ERROR - 2023-05-03 16:01:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventoryweb_ci4`.`barang`, CONSTRAINT `barang_brgkatid_foreign` FOREIGN KEY (`brgkatid`) REFERENCES `kategori` (`katid`)) in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ba...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\app\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(68): App\Models\Modelbarang->insert_data(Array)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(54): App\Controllers\Barang->data_add(Array)
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->store()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-03 16:01:31 --> Cannot add or update a child row: a foreign key constraint fails (`inventoryweb_ci4`.`barang`, CONSTRAINT `barang_brgkatid_foreign` FOREIGN KEY (`brgkatid`) REFERENCES `kategori` (`katid`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129691_13972b7872ad00d29d1a.png\', NULL, \'50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129691_13972b7872ad00d29d1a.png\', NULL, \'50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (\'0\', \'Ember\', \'Perabotan\', \'PCS\', \'50000\', \'1683129691_13972b7872ad00d29d1a.png\', NULL, \'50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barang` (`brgid`, `brgnama`, `brgkatid`, `brgsatid`, `brgharga`, `brggambar`, `brgkode`, `brgstok`) VALUES (:brgid:, :brgnama:, :brgkatid:, :brgsatid:, :brgharga:, :brggambar:, :brgkode:, :brgstok:)', [...], false)
+ 5 APPPATH\Models\Modelbarang.php(22): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Barang.php(68): App\Models\Modelbarang->insert_data([...])
+ 7 APPPATH\Controllers\Barang.php(54): App\Controllers\Barang->data_add([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->store()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+CRITICAL - 2023-05-03 16:15:30 --> Undefined array key "brghargas"
+in APPPATH\Views\barang\viewbarang.php on line 44.
+ 1 APPPATH\Views\barang\viewbarang.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "brghargas"', 'D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Projek\\WebInvetoryCI4\\app\\Views\\barang\\viewbarang.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barang/viewbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(16): view('barang/viewbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
