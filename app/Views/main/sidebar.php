@@ -4,7 +4,7 @@
 
   <li class="nav-item">
     <a href="<?= site_url('lokasi/index') ?>" class="nav-link">
-      <i class="nav-icon far fa fa-tasks"></i>
+      <i class="nav-icon far fa fa-map"></i>
       <p class="text">Lokasi</p>
     </a>
   </li>
@@ -16,13 +16,13 @@
   </li>
   <li class="nav-item">
     <a href="<?= site_url('satuan/index'); ?>" class="nav-link">
-      <i class="nav-icon far fa fa-tasks"></i>
+      <i class="nav-icon far fa fa-yen-sign"></i>
       <p class="text">Satuan</p>
     </a>
   </li>
   <li class="nav-item">
     <a href="<?= site_url('barang/index'); ?>" class="nav-link">
-      <i class="nav-icon far fa fa-tasks"></i>
+      <i class="nav-icon far fa fa-box"></i>
       <p class="text">Barang</p>
     </a>
   </li>
@@ -37,6 +37,12 @@
     <a href="<?= site_url('barangkeluar/data') ?>" class="nav-link">
       <i class="nav-icon fa fa-arrow-circle-up text-warning"></i>
       <p class="text">Barang Keluar</p>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="<?= site_url('barangpermintaan/data') ?>" class="nav-link">
+      <i class="nav-icon fa fa-cubes text-success"></i>
+      <p class="text">Barang Permintaan</p>
     </a>
   </li>
   <li class="nav-item">

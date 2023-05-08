@@ -23,7 +23,7 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'filterAdmin' => \App\Filters\FilterAdmin::class,
         'filterKaryawan' => \App\Filters\FilterKaryawan::class,
-        'filterPemilik' => \App\Filters\FilterPemilik::class,
+        'filterPembelian' => \App\Filters\FilterPembelian::class,
     ];
 
     /**
@@ -39,7 +39,7 @@ class Filters extends BaseConfig
                 'except'=>['auth/*','auth','/']
             ],'filterKaryawan'=>[
                 'except'=>['auth/*','auth','/']
-            ],'filterPemilik'=>[
+            ],'filterPembelian'=>[
                 'except'=>['auth/*','auth','/']
             ]
         ],
@@ -52,6 +52,7 @@ class Filters extends BaseConfig
                     'barang', 'barang/*',
                     'barangkeluar', 'barangkeluar/*',
                     'barangmasuk', 'barangmasuk/*',
+                    'barangpermintaan', 'barangpermintaan/*',
                     'kategori', 'kategori/*',
                     'laporan', 'laporan/*',
                     'pelanggan', 'pelanggan/*',
@@ -66,15 +67,17 @@ class Filters extends BaseConfig
                     'main', 'main/*',
                     'barangkeluar', 'barangkeluar/*',
                     'barangmasuk', 'barangmasuk/*',
+                    'barangpermintaan', 'barangpermintaan/*',
                     'utility', 'utility/*',
                 ]
             ],
-            'filterPemilik'=>[
+            'filterPembelian'=>[
                 'except' => [
                     'login', 'login/*',
                     'main', 'main/*',
                     'barangkeluar', 'barangkeluar/*',
                     'barangmasuk', 'barangmasuk/*',
+                    'barangpermintaan', 'barangpermintaan/*',
                     'laporan', 'laporan/*',
                     'utility', 'utility/*',
                     'users', 'users/*',
