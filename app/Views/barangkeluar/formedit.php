@@ -95,8 +95,10 @@ table#datadetail tbody tr:hover {
 </div>
 <div class="viewmodal" style="display: none;"></div>
 
-<script>
-function ambilTotalHarga() {
+<?= $this->endSection() ?>
+<?= $this->section('javascript') ?>
+<script type="text/javascript">
+    function ambilTotalHarga() {
     let nofaktur = $('#nofaktur').val();
     $.ajax({
         type: "post",
@@ -271,6 +273,9 @@ $(document).ready(function () {
                     $('#tombolBatal').fadeOut();
 
                 }
+                if (response.gagal){
+                    Swal.fire('Gagal', response.gagal, 'error');
+                }
             },
             error: function(xhr, ajaxOptions, thrownError){
                 alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
@@ -278,7 +283,7 @@ $(document).ready(function () {
         });
     });
 });
-</script>
+    </script>
 
 <?= $this->endSection() ?>
 

@@ -9,7 +9,9 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "ifsnop/mysqldump-php": "^2.11",
         "laminas/laminas-escaper": "^2.9",
+        "phpoffice/phpspreadsheet": "^1.28",
         "psr/log": "^1.1"
     },
     "require-dev": {

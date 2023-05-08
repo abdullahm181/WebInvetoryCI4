@@ -72,8 +72,8 @@ function hapusItem(id){
                     if (response.sukses) {
                         Swal.fire({
                            icon: 'Berhasil',
-                           title: 'Berhasil',
-                           html: response.sukses
+                           title: 'Berhasil menghapus',
+                    
                     }); 
                         ambilTotalHarga();
                         tampilDataDetail();
@@ -91,10 +91,11 @@ function hapusItem(id){
 $('#datadetail tbody').on('click', 'tr', function() {
     let row = $(this).closest('tr');
     let kodebarang = row.find('td:eq(1)').text();
+    let jml = row.find('td:eq(4)').text();
     let id = row.find('td input').val();
-
     $('#iddetail').val(id);
     $('#kodebarang').val(kodebarang);
+    $('#jml').val(jml);
 
     $('#tombolBatal').fadeIn();
     $('#tombolEditItem').fadeIn();

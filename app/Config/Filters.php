@@ -66,6 +66,7 @@ class Filters extends BaseConfig
                     'main', 'main/*',
                     'barangkeluar', 'barangkeluar/*',
                     'barangmasuk', 'barangmasuk/*',
+                    'utility', 'utility/*',
                 ]
             ],
             'filterPemilik'=>[
@@ -75,6 +76,8 @@ class Filters extends BaseConfig
                     'barangkeluar', 'barangkeluar/*',
                     'barangmasuk', 'barangmasuk/*',
                     'laporan', 'laporan/*',
+                    'utility', 'utility/*',
+                    'users', 'users/*',
                 ]
             ],
             'toolbar',

@@ -44,23 +44,34 @@ class Auth extends BaseController
             $cekUserLogin = $modelauth->where('usernama', $usernama)->first();
             //$cekUserLogin=$modelauth->find($usernama);
             if($cekUserLogin){
-                $passwordUser= $cekUserLogin['userpassword'];
-                if(password_verify($userpassword,$passwordUser)){
-                    $simpan_session=[
-                        'userid'=>$cekUserLogin['userid'],
-                        'usernama'=>$cekUserLogin['usernama'],
-                        'userlevelid'=>$cekUserLogin['userlevelid']
-                    ];
-                    session()->set($simpan_session);
-                    return redirect()->to('/main/index');
-                }else{
+                if ($cekUserLogin['useraktif'] != '1') {
                     $sessError=[
-                        'errPassword'=>'Password anda salah'
+                        'errUserNama'=>'Maaf user tidak aktif, silahkan hubungi admin untuk atktivasi kembali'
                     ];
         
                     session()->setFlashdata($sessError);
                     return redirect()->to(site_url('Auth/index'));
+                }else{
+                    $passwordUser= $cekUserLogin['userpassword'];
+                    if(password_verify($userpassword,$passwordUser)){
+                        $simpan_session=[
+                            'userid'=>$cekUserLogin['userid'],
+                            'usernama'=>$cekUserLogin['usernama'],
+                            'usernamalengkap'=>$cekUserLogin['usernamalengkap'],
+                            'userlevelid'=>$cekUserLogin['userlevelid']
+                        ];
+                        session()->set($simpan_session);
+                        return redirect()->to('/main/index');
+                    }else{
+                        $sessError=[
+                            'errPassword'=>'Password anda salah'
+                        ];
+            
+                        session()->setFlashdata($sessError);
+                        return redirect()->to(site_url('Auth/index'));
+                    }
                 }
+
             }else{
                 
                 $sessError=[

@@ -14,7 +14,7 @@
             <label for="">No. Faktur</label>
             <input type="text" name="nofaktur" id="nofaktur" class="form-control" value="<?= $nofaktur ?>" readonly>
             <input type="hidden" name="tglfaktur" value="<?= $tglfaktur; ?>">
-            <input type="hidden" name="idpelanggan" value="<?= $idpelanggan; ?>">
+            <input type="hidden" name="namapelanggan" value="<?= $namapelanggan; ?>">
         </div>
         <div class="form-group">
             <label for="">Total Harga</label>
@@ -37,38 +37,25 @@
     </div>
   </div>
 </div>
-<script src="<?= base_url('dist/js/autoNumeric.js') ?>"></script>
+
 <script>
-$(document).ready(function () {
-    $('#totalbayar').autoNumeric('init', {
-        mDec : 0,
-        aDec: ',',
-        aSep : '.'
-    });
-    $('#jumlahuang').autoNumeric('init', {
-        mDec : 0,
-        aDec: ',',
-        aSep : '.'
-    });
-    $('#sisauang').autoNumeric('init', {
-        mDec : 0,
-        aDec: ',',
-        aSep : '.'
-    });
-    
+   
+jQuery( document ).ready(function( $ ) { 
     $('#jumlahuang').keyup(function (e) { 
-       let totalbayar = $('#totalbayar').autoNumeric('get');
-       let jumlahuang = $('#jumlahuang').autoNumeric('get');
+       let totalbayar = $('#totalbayar').val();
+       let jumlahuang = $('#jumlahuang').val();
 
        let sisauang;
+       if((jumlahuang == null || jumlahuang== "")) jumlahuang=0;
+       sisauang = parseInt(jumlahuang) - parseInt(totalbayar);
+       
+    //    if (parseInt(jumlahuang) < parseInt(totalbayar)){
+    //        //sisauang = 0;
+    //    }else{
+    //        sisauang = parseInt(jumlahuang) - parseInt(totalbayar);
+    //    }
 
-       if (parseInt(jumlahuang) < parseInt(totalbayar)){
-           sisauang = 0;
-       }else{
-           sisauang = parseInt(jumlahuang) - parseInt(totalbayar);
-       }
-
-       $('#sisauang').autoNumeric('set', sisauang);
+       $('#sisauang').val(sisauang);
     });
 
     $('.frmpembayaran').submit(function (e) { 
@@ -107,6 +94,12 @@ $(document).ready(function () {
                             window.location.reload();
                         }
                     });
+                }
+                if (response.gagal){
+                    Swal.fire({
+                        title: 'Gagal',
+                        text: response.gagal,
+                        icon: 'error',});
                 }
             },
             error: function(xhr, ajaxOptions, thrownError){

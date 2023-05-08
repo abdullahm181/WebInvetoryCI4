@@ -438,7 +438,16 @@ class Barangmasuk extends BaseController
 
         $db = \Config\Database::connect();
         $modelBarangMasuk = new Modelbarangmasuk();
+        $modelBarang= new Modelbarang();
+        //get detail old brg masuk
+        $dataDetOld=$db->table('detail_barangmasuk')->where('detfaktur',$faktur)->get()->getResult();
 
+        foreach($dataDetOld as $dt){
+            
+            $dataBarang=$modelBarang->where('brgkode',$dt->detbrgkode)->first();
+            $dataBarang['brgstok']=$dataBarang['brgstok']-$dt->detjml;
+            $modelBarang->update($dataBarang['brgid'], $dataBarang);
+        }
         $db->table('detail_barangmasuk')->delete(['detfaktur' => $faktur]);
         $modelBarangMasuk->delete($faktur);
 

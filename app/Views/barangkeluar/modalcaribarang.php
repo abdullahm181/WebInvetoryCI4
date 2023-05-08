@@ -43,8 +43,9 @@ function pilih(kode){
 function listDataBarang(){
     var table = $('#databarang').DataTable({
         destroy : true,
+        
         "processing" : true,
-        "serverSide" : true,
+        "serverSide" : false,
         "order" : [],
         "ajax" : {
             "url": "/barangkeluar/listDataBarang",

@@ -82,6 +82,7 @@ function hapusTransaksi(faktur){
                 },
                 dataType: "json",
                 success: function (response) {
+                    console.log(response);
                     if (response.sukses) {
                         Swal.fire({
                            icon: 'success',

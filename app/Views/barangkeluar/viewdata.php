@@ -5,9 +5,9 @@ Data Transaksi Barang Keluar
 <?= $this->endSection() ?>
 
 <?= $this->section('subjudul') ?>
-    <button type="button" class="btn btn-primary" onclick="window.location='<?= site_url('barangkeluar/input') ?>'">
-        <i class="fa fa-plus-circle"></i> Input Transaksi
-    </button>
+<button type="button" class="btn btn-primary" onclick="window.location='<?= site_url('barangkeluar/input') ?>'">
+    <i class="fa fa-plus-circle"></i> Input Transaksi
+</button>
 <?= $this->endSection() ?>
 
 <?= $this->section('isi') ?>
@@ -44,89 +44,93 @@ Data Transaksi Barang Keluar
     </tbody>
 </table>
 
-<script>
-function cektransaksi(faktur){
-    window.location.href = '/barangkeluar/cektransaksi/' + faktur;
-}
+<?= $this->endSection() ?>
 
-function listDataBarangKeluar(){
-    var table = $('#databarangkeluar').DataTable({
-        destroy : true,
-        "processing" : true,
-        "serverSide" : true,
-        "order" : [],
-        "ajax" : {
-            "url": "/barangkeluar/listData",
-            "type": "POST",
-            "data" : {
-                tglawal : $('#tglawal').val(),
-                tglakhir : $('#tglakhir').val(),
+<?= $this->section('javascript') ?>
+<script type="text/javascript">
+     function cektransaksi(faktur) {
+        window.location.href = '/barangkeluar/cektransaksi/' + faktur;
+    }
+
+    function listDataBarangKeluar() {
+        var table = $('#databarangkeluar').DataTable({
+            destroy: true,
+            "processing": true,
+            "serverSide": false,
+            "order": [],
+            "ajax": {
+                "url": "/barangkeluar/listData",
+                "type": "POST",
+                "data": {
+                    tglawal: $('#tglawal').val(),
+                    tglakhir: $('#tglakhir').val(),
+                },
             },
-        },
-        "columnDefs" : [{
-            "targets" : [0, 5],
-            "orderable" : false,
-        },],
-    });
-}
+            "columnDefs": [{
+                "targets": [0, 5],
+                "orderable": false,
+            }, ],
+        });
+    }
 
-function cetak(faktur) {
-    let windowCetak = window.open('/barangkeluar/cetakfaktur/'+faktur, "Cetak Faktur Barang Keluar", "width=400,height=400");
+    function cetak(faktur) {
+        let windowCetak = window.open('/barangkeluar/cetakfaktur/' + faktur, "Cetak Faktur Barang Keluar", "width=400,height=400");
 
-    windowCetak.focus();
-}
+        windowCetak.focus();
+    }
 
-function hapus(faktur) {
-    Swal.fire({
-        title: 'Hapus Transaksi',
-        text: "Yakin hapus transaksi ini?",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, Hapus!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            $.ajax({
-                type: "post",
-                url: "/barangkeluar/hapusTransaksi",
-                data: {
-                    faktur : faktur
-                },
-                dataType: "json",
-                success: function (response) {
-                    if (response.sukses) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Berhasil',
-                            html: response.sukses
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.reload();
+    function hapus(faktur) {
+        Swal.fire({
+            title: 'Hapus Transaksi',
+            text: "Yakin hapus transaksi ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Hapus!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "post",
+                    url: "/barangkeluar/hapusTransaksi",
+                    data: {
+                        faktur: faktur
+                    },
+                    dataType: "json",
+                    success: function(response) {
+                        console.log(response);
+                        if (response.sukses) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil',
+                                html: response.sukses
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.reload();
+                                }
+                            });
                         }
-                    });    
-                    }
-                },
-                error: function(xhr, ajaxOptions, thrownError){
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
                         alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
                     }
-            });
-        }
-    })
-}
+                });
+            }
+        })
+    }
 
-$(document).ready(function () {
-    listDataBarangKeluar();
-
-    $('#tombolTampil').click(function (e) { 
-        e.preventDefault();
-        
+    $(document).ready(function() {
         listDataBarangKeluar();
-    });
-});
 
-function edit(faktur){
-    window.location.href=('/barangkeluar/edit/') + faktur;
-}
+        $('#tombolTampil').click(function(e) {
+            e.preventDefault();
+
+            listDataBarangKeluar();
+        });
+    });
+
+    function edit(faktur) {
+        window.location.href = ('/barangkeluar/edit/') + faktur;
+    }
 </script>
 <?= $this->endSection() ?>
