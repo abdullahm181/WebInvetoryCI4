@@ -97,6 +97,12 @@
   </li>
 <?php endif; ?>
 <li class="nav-item">
+  <a href="<?= site_url('utility/scannerPage') ?>" class="nav-link">
+    <i class="fa fa-qrcode nav-icon text-white"></i>
+    <p class="text">Scanner</p>
+  </a>
+</li>
+<li class="nav-item">
         <a href="<?= site_url('utility/index') ?>" class="nav-link">
             <i class="nav-icon fa fa-database text-warning"></i>
             <p class="text">BackUp DB</p>

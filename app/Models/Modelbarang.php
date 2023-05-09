@@ -50,7 +50,7 @@ class Modelbarang extends Model
     }
 
     public function get_by_kode($kode){
-        return $this->table('barang')->Where('brgkode', $kode)->first();
+        return $this->table('barang')->join('lokasi','brglokid=lokid')->Where('brgkode', $kode)->first();
 
     }
 
