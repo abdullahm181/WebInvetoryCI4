@@ -3,34 +3,59 @@
 
 <canvas id="myChart" style="height: 50vh; width: 80vh;"></canvas>
 
-<?php 
-    $tanggal = "";
-    $total = "";
 
-    foreach ($grafik as $row) :
-        $tgl = $row->tgl;
-
-        $tanggal .= "'$tgl'" . ",";
-
-        $totalHarga = $row->totalharga;
-        $total .= "'$totalHarga'" . ",";
-    endforeach;
-?>
 
 <script>
+    var dynamicColors = function() {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            return "rgb(" + r + "," + g + "," + b + ")";
+         };
+    function getcolor(){
+        var data=[<?php 
+            foreach( $grafik as $row) {
+                   echo "'". $row->brgnama."', "; // you can also use $row if you don't use keys                  
+            }?>];
+        coloR=[];
+        for (var i in data) {
+            coloR.push(dynamicColors());
+         }
+         return coloR;
+    }
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         type: 'bar',
         reponsive: true,
         data: {
-            labels: [<?= $tanggal ?>],
+            labels: [<?php 
+            foreach( $grafik as $row) {
+                   echo "'". $row->brgnama."', "; // you can also use $row if you don't use keys                  
+            }?>],
             datasets: [{
-                label: 'Total Harga',
-                backgroundColor: ['rgb(255,99,132)', 'rgb(14,99,132)'],
+                
+                backgroundColor: getcolor(),
                 borderColor: ['rgb(255,991,130)'],
-                data: [<?= $total ?>],
+                data: [<?php 
+            foreach( $grafik as $row) {
+                   echo "'".$row->QTY."', "; // you can also use $row if you don't use keys                  
+            }?>],
             }]
         },
+    options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: false // Hide legend
+        },
+        scales: {
+            y: {
+                display: false // Hide Y axis labels
+            },
+            x: {
+                display: false // Hide X axis labels
+            }
+        }   
+    },
         duration: 1000
     });
     

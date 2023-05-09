@@ -55,7 +55,46 @@ Laporan Barang Masuk
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Laporan Detail Barang masuk</div>
+            <div class="card-body bg-white">
 
+            <div class="row">
+    <div class="col">
+        <label for="">Filter Data</label>
+    </div>
+    <div class="col">
+        <input type="date" name="tglawaldetail" id="tglawaldetail" class="form-control">
+    </div>
+    <div class="col">
+        <input type="date" name="tglakhirdetail" id="tglakhirdetail" class="form-control">
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-block btn-primary" id="tombolTampilDetail"> Tampilkan</button>
+    </div>
+</div>
+<br>
+<table style="width: 100%;" id="datdetailbarangmasuk" class="table table-bordered table-hover dataTable dtr-inline collapsed">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Barang</th>
+            <th>Kode Barang</th>
+            <th>Tanggal Masuk</th>
+            <th>Jumlah</th>
+            <th>Input By</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <?= $this->endSection() ?>
@@ -82,7 +121,26 @@ Laporan Barang Masuk
             }
         });
     }
-
+    function listDataDetailBarangMasuk() {
+        var table = $('#datdetailbarangmasuk').DataTable({
+            destroy: true,
+            "processing": true,
+            "serverSide": false,
+            "order": [],
+            "ajax": {
+                "url": "/laporan/listDataDetailBarangMasuk",
+                "type": "POST",
+                "data": {
+                    tglawal: $('#tglawaldetail').val(),
+                    tglakhir: $('#tglakhirdetail').val(),
+                },
+            },
+            "columnDefs": [{
+                "targets": [0, 5],
+                "orderable": false,
+            }, ],
+        });
+    }
     $(document).ready(function() {
         tampilGrafik();
 
@@ -90,6 +148,11 @@ Laporan Barang Masuk
             e.preventDefault();
             tampilGrafik();
         });
+        $('#tombolTampilDetail').click(function(e) {
+            e.preventDefault();
+
+            listDataDetailBarangMasuk();
+        });
     });
-    </script>
+</script>
 <?= $this->endSection() ?>
