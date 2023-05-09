@@ -4,7 +4,9 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\Modelbarangmasuk;
+use App\Models\Modelbarangkeluar;
 use App\Models\Modeldetailbarangmasuk;
+use App\Models\Modeldetailbarangkeluar;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use Phpoffice\PhpSpreadsheet\Writer\Xlsx;
 use Config\Services;
@@ -20,6 +22,10 @@ class Laporan extends BaseController
     {
         return view('laporan/viewbarangmasuk');
     }
+    public function cetak_barang_keluar()
+    {
+        return view('laporan/viewbarangkeluar');
+    }
 
     public function listDataDetailBarangMasuk()
     {
@@ -28,6 +34,44 @@ class Laporan extends BaseController
 
         $request = Services::request();
         $datamodel = new Modeldetailbarangmasuk();
+        $lists = $datamodel->get_datatables($tglawal, $tglakhir);
+
+            
+            $data = [];
+            $no = $request->getPost("start");
+            foreach ($lists as $list) {
+                //print_r($list);
+                $no++;
+                $row = [];
+
+                
+
+                $row[] = $no;
+                $row[] = $list->brgnama;
+                $row[] = $list->brgkode;
+                $row[] = $list->tglfaktur;
+
+                
+
+                $row[] = number_format($list->detjml, 0, ",", ".");
+                $row[] = $list->usernamalengkap;
+           
+                $data[] = $row;
+            }
+            $output = [
+                "draw" => $request->getPost('draw'),
+                "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
+                "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
+                "data" => $data
+            ];
+            echo json_encode($output);
+    }
+    public function listDataDetailBarangKeluar()
+    {
+        $tglawal = $this->request->getPost('tglawal');
+        $tglakhir = $this->request->getPost('tglakhir');
+        $request = Services::request();
+        $datamodel = new Modeldetailbarangkeluar();
         $lists = $datamodel->get_datatables($tglawal, $tglakhir);
 
             
@@ -170,6 +214,34 @@ class Laporan extends BaseController
             $writer->save('php://output');
         }
     }
+    public function cetak_barang_keluar_periode()
+    {
+        $tombolCetak = $this->request->getPost('btnCetak');
+        $tombolExport = $this->request->getPost('btnExport');
+        $tglawal = $this->request->getPost('tglawal');
+        $tglakhir = $this->request->getPost('tglakhir');
+
+        $modelBarangMasuk = new Modelbarangkeluar();
+
+        $dataLaporan = $modelBarangMasuk->laporanPerPeriode($tglawal, $tglakhir);
+        $db = \Config\Database::connect();
+        $datagroup =  $db->query("SELECT barang.brgnama AS brgnama, barang.brgkode as brgkode,sum(detail_barangkeluar.detjml) as QTY FROM barangkeluar 
+        LEFT JOIN detail_barangkeluar ON barangkeluar.faktur=detail_barangkeluar.detfaktur  LEFT JOIN barang on detail_barangkeluar.detbrgkode=barang.brgkode WHERE barangkeluar.tglfaktur >= '$tglawal' AND barangkeluar.tglfaktur <='$tglakhir' group by barang.brgnama,barang.brgkode ORDER BY barang.brgkode ASC");
+        $datamodel = new Modeldetailbarangkeluar();
+         $datadetail = $datamodel->get_datatables($tglawal, $tglakhir);
+
+        if (isset($tombolCetak)) {
+            $data = [
+                'datalaporan' => $dataLaporan,
+                'datadetail'=>$datadetail,
+                'datagroup'=>$datagroup,
+                'tglawal' => $tglawal,
+                'tglakhir' => $tglakhir
+            ];
+
+            return view('laporan/cetaklaporanbarangkeluar', $data);
+        }
+    }
 
     public function tampilGrafikBarangMasuk()
     {
@@ -179,6 +251,26 @@ class Laporan extends BaseController
         // $query = $db->query("SELECT tglfaktur AS tgl, totalharga FROM barangmasuk WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' ORDER BY tglfaktur ASC")->getResult();
         $query = $db->query("SELECT barang.brgnama AS brgnama,sum(detail_barangmasuk.detjml) as QTY FROM barangmasuk 
         LEFT JOIN detail_barangmasuk ON barangmasuk.faktur=detail_barangmasuk.detfaktur  LEFT JOIN barang on detail_barangmasuk.detbrgkode=barang.brgkode WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' group by barang.brgnama,barang.brgkode ORDER BY barang.brgkode ASC")->getResult();
+        //print_r($query);
+        $data = [
+            'grafik' => $query
+        ];
+
+        $json = [
+            'data' => view('laporan/grafikbarangmasuk', $data)
+        ];
+
+        echo json_encode($json);
+    }
+
+    public function tampilGrafikBarangKeluar()
+    {
+        $bulan = $this->request->getPost('bulan');
+        //$bulan = date('Y-m-d');
+        $db = \Config\Database::connect();
+        // $query = $db->query("SELECT tglfaktur AS tgl, totalharga FROM barangmasuk WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' ORDER BY tglfaktur ASC")->getResult();
+        $query = $db->query("SELECT barang.brgnama AS brgnama,sum(detail_barangkeluar.detjml) as QTY FROM barangkeluar 
+        LEFT JOIN detail_barangkeluar ON barangkeluar.faktur=detail_barangkeluar.detfaktur  LEFT JOIN barang on detail_barangkeluar.detbrgkode=barang.brgkode WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' group by barang.brgnama,barang.brgkode ORDER BY barang.brgkode ASC")->getResult();
         //print_r($query);
         $data = [
             'grafik' => $query

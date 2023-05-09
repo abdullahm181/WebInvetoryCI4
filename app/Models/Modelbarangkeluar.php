@@ -93,4 +93,7 @@ class Modelbarangkeluar extends Model
 
         return $tbl_storage->countAllResults();
     }
+    public function laporanPerPeriode($tglawal, $tglakhir){
+      return $this->table('barangkeluar')->where('tglfaktur >=', $tglawal)->where('tglfaktur <=', $tglakhir)->get();
+  }
 }

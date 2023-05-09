@@ -73,7 +73,8 @@ class Modeldetailbarangmasuk extends Model
         if ($tglawal=='' && $tglakhir==''){
             $tbl_storage = $this->db->table($this->table);
         }else{
-            $tbl_storage = $this->db->table($this->table)
+            $tbl_storage = $this->table('detail_barangmasuk')
+            ->join('barang', 'brgkode=detbrgkode')->join('barangmasuk','faktur=detfaktur')->join('users','userid=inputby')
                 ->where('tglfaktur >=', $tglawal)
                 ->where('tglfaktur <=', $tglakhir);
         }

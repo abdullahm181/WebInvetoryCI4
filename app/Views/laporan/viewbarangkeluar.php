@@ -1,7 +1,7 @@
 <?= $this->extend('main/layout') ?>
 
 <?= $this->section('judul') ?>
-Laporan Barang Masuk
+Laporan Barang Keluar
 <?= $this->endSection() ?>
 
 <?= $this->section('subjudul') ?>
@@ -15,7 +15,7 @@ Laporan Barang Masuk
             <div class="card-header">Pilih Periode</div>
             <div class="card-body bg-white">
                 <p class="card-text">
-                <form action="<?= site_url('laporan/cetak_barang_masuk_periode') ?>" method="POST">
+                <form action="<?= site_url('laporan/cetak_barang_keluar_periode') ?>" method="POST">
                     <div class="form-group">
                         <label for="">Tanggal Awal</label>
                         <input type="date" name="tglawal" class="form-control" required>
@@ -28,7 +28,6 @@ Laporan Barang Masuk
                         <button type="submit" name="btnCetak" class="btn btn-block btn-success">
                             <i class="fa fa-print"></i> Cetak Laporan
                         </button>
-                        
                     </div>
                 </form>
                 </p>
@@ -56,7 +55,7 @@ Laporan Barang Masuk
 <div class="row">
     <div class="col-lg-12">
         <div class="card text-white bg-primary mb-3">
-            <div class="card-header">Laporan Detail Barang masuk</div>
+            <div class="card-header">Laporan Detail Barang Keluar</div>
             <div class="card-body bg-white">
 
             <div class="row">
@@ -74,7 +73,7 @@ Laporan Barang Masuk
     </div>
 </div>
 <br>
-<table style="width: 100%;" id="datdetailbarangmasuk" class="table table-bordered table-hover dataTable dtr-inline collapsed">
+<table style="width: 100%;" id="datdetailbarangkeluar" class="table table-bordered table-hover dataTable dtr-inline collapsed">
     <thead>
         <tr>
             <th>No</th>
@@ -101,7 +100,7 @@ Laporan Barang Masuk
     function tampilGrafik() {
         $.ajax({
             type: "post",
-            url: "/laporan/tampilGrafikBarangMasuk",
+            url: "/laporan/tampilGrafikBarangKeluar",
             data: {
                 bulan: $('#bulan').val()
             },
@@ -119,14 +118,14 @@ Laporan Barang Masuk
             }
         });
     }
-    function listDataDetailBarangMasuk() {
-        var table = $('#datdetailbarangmasuk').DataTable({
+    function listDataDetailBarangKeluar() {
+        var table = $('#datdetailbarangkeluar').DataTable({
             destroy: true,
             "processing": true,
             "serverSide": false,
             "order": [],
             "ajax": {
-                "url": "/laporan/listDataDetailBarangMasuk",
+                "url": "/laporan/listDataDetailBarangKeluar",
                 "type": "POST",
                 "data": {
                     tglawal: $('#tglawaldetail').val(),
@@ -149,7 +148,7 @@ Laporan Barang Masuk
         $('#tombolTampilDetail').click(function(e) {
             e.preventDefault();
 
-            listDataDetailBarangMasuk();
+            listDataDetailBarangKeluar();
         });
     });
 </script>
