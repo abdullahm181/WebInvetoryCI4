@@ -1,4 +1,13 @@
 <?php if (session()->userlevelid == 1) : ?>
+  <li class="nav-header">EOQ</li>
+
+
+  <li class="nav-item">
+    <a href="<?= site_url('EOQ/index') ?>" class="nav-link">
+      <i class="nav-icon far fa fa-wrench"></i>
+      <p class="text">EOQ Management</p>
+    </a>
+  </li>
   <li class="nav-header">Master</li>
 
 
@@ -76,6 +85,15 @@
   </li>
 <?php endif; ?>
 <?php if (session()->userlevelid == 4) : ?>
+  <li class="nav-header">EOQ</li>
+
+
+  <li class="nav-item">
+    <a href="<?= site_url('EOQ/index') ?>" class="nav-link">
+      <i class="nav-icon far fa fa-wrench"></i>
+      <p class="text">EOQ Management</p>
+    </a>
+  </li>
   <li class="nav-header">Transaksi</li>
   <li class="nav-item">
     <a href="<?= site_url('barangmasuk/data') ?>" class="nav-link">

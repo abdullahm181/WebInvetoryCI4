@@ -74,9 +74,7 @@ Input Transaksi Barang Keluar
                 <button type="button" class="btn btn-info" title="Selesai Transaksi" id="tombolSelesaiTransaksi">
                     Selesai Transaksi
                 </button>&nbsp;
-                <button type="button" class="btn btn-primary" title="Payment Midtrans" id="tombolPay">
-                    Pay
-                </button>
+                
             </div>
         </div>
     </div>

@@ -48,8 +48,9 @@ Management Data Barang
         <td><?= $row['brgkode']; ?></td>
         <td><?= $row['brgharga']; ?></td>
         <td><?= $row['brgstok']; ?></td>
-        <td><?= $row['brglokid']; ?></td>
+        <td><?= $row['loklorong'].'-'.$row['lokrak']; ?></td>
         <td>
+        <button class="btn btn-success" onclick="cetak(<?= $row['brgid']; ?>)">Cetak</button>
           <button class="btn btn-warning" onclick="edit_data(<?= $row['brgid']; ?>)">Edit</button>
           <button class="btn btn-danger" onclick="delete_data(<?= $row['brgid']; ?>)">Delete</button>
         </td>
@@ -255,7 +256,7 @@ Management Data Barang
         if (res['status']) {
           $('#addBarang')[0].reset();
           $('#modal_form').modal('hide');
-          //location.reload();
+          location.reload();
 
         } else {
           Swal.fire({
@@ -292,6 +293,11 @@ Management Data Barang
         }
       });
     }
+  }
+  function cetak(id) {
+    // ajax delete data from database
+    window.location="<?php echo site_url('barang/cetakkode') ?>/" + id
+    
   }
 
   function edit_data(id) {

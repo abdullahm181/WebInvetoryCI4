@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Inventory</title>
-
+  <title>Gudang Parsial</title>
+  <link rel="icon" href="<?= base_url() ?>/uploads/logo.png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -24,7 +24,7 @@
         <a href="<?= base_url() ?>/index2.html" class="h1"><b>Gudang</b> Parsial</a>
       </div>
       <div class="card-body">
-        <p class="login-box-msg">Login untuk akses inventory !</p>
+        <p class="login-box-msg">PT. Surya Citra Utama Mandiri</p>
 
         <?= form_open('auth/cekUser'); ?>
         <?= csrf_field(); ?>

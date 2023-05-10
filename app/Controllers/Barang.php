@@ -12,9 +12,23 @@ class Barang extends BaseController
     {
         $model = new Modelbarang();
         $data = [
-            'tampildata' => $model->orderBy('brgid', 'DESC')->findAll()
+            'tampildata' => $model->join('lokasi','lokid=brglokid')->orderBy('brgid', 'DESC')->findAll()
         ];
         return view('barang/viewbarang', $data);
+    }
+    public function cetakkode($id = null)
+    {
+        $model = new Modelbarang();
+        if($id==null){
+            $data=$model->join('lokasi','lokid=brglokid')->orderBy('brgid', 'DESC')->findAll();
+        }else{
+            $data=array();
+            $data[]=$model->get_by_id($id);
+        }
+        $data = [
+            'tampildata' => $data
+        ];
+        return view('barang/cetakQrcode', $data);
     }
     
     public function store()

@@ -59,6 +59,7 @@ class Filters extends BaseConfig
                     'satuan', 'satuan/*',
                     'utility', 'utility/*',
                     'users', 'users/*',
+                    'EOQ', 'EOQ/*',
                 ]
             ],
             'filterKaryawan'=>[
@@ -81,6 +82,7 @@ class Filters extends BaseConfig
                     'laporan', 'laporan/*',
                     'utility', 'utility/*',
                     'users', 'users/*',
+                    'EOQ', 'EOQ/*',
                 ]
             ],
             'toolbar',

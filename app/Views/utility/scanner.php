@@ -91,7 +91,7 @@ Scanner BarCode ( Informasi Barang )
   $(document).ready(function() {
     // When scan is successful fucntion will produce data
     function onScanSuccess(qrCodeMessage) {
-      $('#kdbarang').val('qrCodeMessage');
+      $('#kdbarang').val(qrCodeMessage);
       ambilDataBarang();
       document.getElementById("result").innerHTML =
         '<span class="result">' + qrCodeMessage + "</span>";
