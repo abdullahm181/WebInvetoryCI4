@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="<?= base_url() ?>/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>/dist/css/adminlte.min.css">
-  <script src="<?= base_url('dist/js/autoNumeric.js') ?>"></script>
+  <link rel="stylesheet" href="<?= base_url(). '/plugins/chart.js/Chart.min.css' ?>">
+<script src="<?= base_url(). '/plugins/chart.js/Chart.bundle.min.js' ?>"></script>
+  
 </head>
 
 <body class="hold-transition sidebar-mini">
