@@ -8,7 +8,7 @@ class Modeltempbarangkeluar extends Model
 {
     protected $table            = 'temp_barangkeluar';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['detfaktur', 'detbrgkode', 'dethargajual', 'detjml', 'detsubtotal'];
+    protected $allowedFields    = ['detfaktur', 'detbrgkode',  'detjml'];
     public function __construct() {
       parent::__construct();
       //$this->load->database();

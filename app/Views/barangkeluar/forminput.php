@@ -34,7 +34,7 @@ Input Transaksi Barang Keluar
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-4">
         <div class="form-group">
             <label for="">Kode Barang</label>
             <div class="input-group mb-3">
@@ -46,16 +46,10 @@ Input Transaksi Barang Keluar
             </div>
         </div>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-4">
         <div class="form-group">
             <label for="">Nama Barang</label>
             <input type="text" name="namabarang" id="namabarang" class="form-control" readonly>
-        </div>
-    </div>
-    <div class="col-lg-2">
-        <div class="form-group">
-            <label for="">harga Jual (Rp)</label>
-            <input type="text" name="hargajual" id="hargajual" class="form-control" readonly>
         </div>
     </div>
     <div class="col-lg-2">
@@ -64,7 +58,7 @@ Input Transaksi Barang Keluar
             <input type="number" name="jml" id="jml" class="form-control" value="1">
         </div>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
         <div class="form-group">
             <label for="">#</label>
             <div class="input-group mb-3">
@@ -180,7 +174,6 @@ Input Transaksi Barang Keluar
 
     function kosong() {
         $('#kodebarang').val('');
-        $('#hargajual').val('');
         $('#namabarang').val('');
         $('#jml').val('1');
         $('#kodebarang').focus();
@@ -190,7 +183,6 @@ Input Transaksi Barang Keluar
         let nofaktur = $('#nofaktur').val();
         let kodebarang = $('#kodebarang').val();
         let namabarang = $('#namabarang').val();
-        let hargajual = $('#hargajual').val();
         let jml = $('#jml').val();
 
         if (kodebarang.length == 0) {
@@ -204,8 +196,7 @@ Input Transaksi Barang Keluar
                     nofaktur: nofaktur,
                     kodebarang: kodebarang,
                     namabarang: namabarang,
-                    jml: jml,
-                    hargajual: hargajual
+                    jml: jml
                 },
                 dataType: "json",
                 success: function(response) {
@@ -251,7 +242,7 @@ Input Transaksi Barang Keluar
                         let data = response.sukses;
 
                         $('#namabarang').val(data.namabarang);
-                        $('#hargajual').val(data.hargajual);
+                        
                     }
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
@@ -354,22 +345,19 @@ Input Transaksi Barang Keluar
             }else{
                 $.ajax({
                 type: "post",
-                url: "/barangkeluar/modalPembayaran",
+                url: "/barangkeluar/simpantransaksi",
                 data: {
                     nofaktur: $('#nofaktur').val(),
                     tglfaktur: $('#tglfaktur').val(),
-                    namapelanggan: $('#namapelanggan').val(),
-                    totalharga: $('#totalharga').val()
+                    namapelanggan: $('#namapelanggan').val()
                 },
                 dataType: "json",
                 success: function(response) {
-                    if (response.error) {
-                        Swal.fire('Error', response.error, 'error');
-                    }
-
-                    if (response.data) {
-                        $('.viewmodal').html(response.data).show();
-                        $('#modalpembayaran').modal('show');
+                    if (response.sukses) {
+                        Swal.fire('Success', response.sukses, 'success');
+                        window.location.reload();
+                    }else{
+                        Swal.fire('Error', 'error', 'error');
                     }
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
@@ -378,110 +366,6 @@ Input Transaksi Barang Keluar
             });
             }
             
-        });
-
-        $('#tombolPay').click(function(e) {
-            e.preventDefault();
-            $.ajax({
-                type: "post",
-                url: "/barangkeluar/payMidtrans",
-                data: {
-                    nofaktur: $('#nofaktur').val(),
-                    tglfaktur: $('#tglfaktur').val(),
-                    namapelanggan: $('#namapelanggan').val(),
-                    totalharga: $('#totalharga').val()
-                },
-                dataType: "json",
-                success: function(response) {
-                    if (response.error) {
-                        Swal.fire('Error', response.error, 'error');
-                    } else {
-                        snap.pay(response.snapToken, {
-                            // Optional
-                            onSuccess: function(result) {
-                                let dataResult = JSON.stringify(result, null, 2);
-                                let dataObj = JSON.parse(dataResult);
-
-                                $.ajax({
-                                    type: "post",
-                                    url: "/barangkeluar/finishMidtrans",
-                                    data: {
-                                        nofaktur: response.nofaktur,
-                                        tglfaktur: response.tglfaktur,
-                                        namapelanggan: response.namapelanggan,
-                                        totalharga: response.totalharga,
-                                        order_id: dataObj.order_id,
-                                        payment_type: dataObj.payment_type,
-                                        transaction_status: dataObj.transaction_status,
-                                    },
-                                    dataType: "json",
-                                    success: function(response) {
-                                        if (response.sukses) {
-                                            alert(response.sukses);
-                                            window.location.reload();
-                                        }
-                                    }
-                                });
-                            },
-                            // Optional
-                            onPending: function(result) {
-                                let dataResult = JSON.stringify(result, null, 2);
-                                let dataObj = JSON.parse(dataResult);
-
-                                $.ajax({
-                                    type: "post",
-                                    url: "/barangkeluar/finishMidtrans",
-                                    data: {
-                                        nofaktur: response.nofaktur,
-                                        tglfaktur: response.tglfaktur,
-                                        namapelanggan: response.namapelanggan,
-                                        totalharga: response.totalharga,
-                                        order_id: dataObj.order_id,
-                                        payment_type: dataObj.payment_type,
-                                        transaction_status: dataObj.transaction_status,
-                                    },
-                                    dataType: "json",
-                                    success: function(response) {
-                                        if (response.sukses) {
-                                            alert(response.sukses);
-                                            window.location.reload();
-                                        }
-                                    }
-                                });
-                            },
-                            // Optional
-                            onError: function(result) {
-                                let dataResult = JSON.stringify(result, null, 2);
-                                let dataObj = JSON.parse(dataResult);
-
-                                $.ajax({
-                                    type: "post",
-                                    url: "/barangkeluar/finishMidtrans",
-                                    data: {
-                                        nofaktur: response.nofaktur,
-                                        tglfaktur: response.tglfaktur,
-                                        namapelanggan: response.namapelanggan,
-                                        totalharga: response.totalharga,
-                                        order_id: dataObj.order_id,
-                                        payment_type: dataObj.payment_type,
-                                        transaction_status: dataObj.transaction_status,
-                                    },
-                                    dataType: "json",
-                                    success: function(response) {
-                                        if (response.sukses) {
-                                            alert(response.sukses);
-                                            window.location.reload();
-                                        }
-                                    }
-                                });
-                            }
-                        });
-                    }
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
-                }
-            });
         });
     });
 </script>

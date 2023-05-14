@@ -25,7 +25,6 @@ table#datadetail tbody tr:hover {
         <td style="width: 20%;">No. faktur</td>
         <td style="width: 2%;">:</td>
         <td style="width: 28%;"><?= $nofaktur; ?></td>
-        <td style="width: 50%; font-weight:bold; color:red; font-size:20pt; text-align:center; vertical-align:middle;" id="lbTotalHarga"></td>
     </tr>
     <tr>
         <td>Tanggal</td>
@@ -40,7 +39,7 @@ table#datadetail tbody tr:hover {
 </table>
 
 <div class="row mt-4">
-    <div class="col-lg-2">
+    <div class="col-lg-4">
         <div class="form-group">
             <label for="">Kode Barang</label>
             <div class="input-group mb-3">
@@ -52,16 +51,10 @@ table#datadetail tbody tr:hover {
             </div>
         </div>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-4">
         <div class="form-group">
             <label for="">Nama Barang</label>
             <input type="text" name="namabarang" id="namabarang" class="form-control" readonly>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="form-group">
-            <label for="">harga Jual (Rp)</label>
-            <input type="text" name="hargajual" id="hargajual" class="form-control" readonly>
         </div>
     </div>
     <div class="col-lg-2">
@@ -98,23 +91,7 @@ table#datadetail tbody tr:hover {
 <?= $this->endSection() ?>
 <?= $this->section('javascript') ?>
 <script type="text/javascript">
-    function ambilTotalHarga() {
-    let nofaktur = $('#nofaktur').val();
-    $.ajax({
-        type: "post",
-        url: "/barangkeluar/ambilTotalHarga",
-        data: {
-            nofaktur: nofaktur
-        },
-        dataType: "json",
-        success: function (response) {
-            $('#lbTotalHarga').html(response.totalharga);
-        },
-        error: function(xhr, ajaxOptions, thrownError){
-            alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
-        }
-    });
-}
+    
 
 function ambilDataBarang(){
     let kodebarang = $('#kodebarang').val();
@@ -139,7 +116,6 @@ function ambilDataBarang(){
                     let data = response.sukses;
 
                     $('#namabarang').val(data.namabarang);
-                    $('#hargajual').val(data.hargajual);
                 }
             },
             error: function(xhr, ajaxOptions, thrownError){
@@ -151,7 +127,6 @@ function ambilDataBarang(){
 
 function kosong(){
     $('#kodebarang').val('');
-    $('#hargajual').val('');
     $('#namabarang').val('');
     $('#jml').val('1');
     $('#kodebarang').focus();
@@ -184,7 +159,6 @@ function simpanItem(){
     let nofaktur = $('#nofaktur').val();
     let kodebarang = $('#kodebarang').val();
     let namabarang = $('#namabarang').val();
-    let hargajual = $('#hargajual').val();
     let jml = $('#jml').val();
 
     if (kodebarang.length == 0) {
@@ -198,8 +172,7 @@ function simpanItem(){
                 nofaktur: nofaktur,
                 kodebarang: kodebarang,
                 namabarang: namabarang,
-                jml: jml,
-                hargajual: hargajual
+                jml: jml
             },
             dataType: "json",
             success: function (response) {
@@ -211,7 +184,6 @@ function simpanItem(){
                 if (response.sukses) {
                     Swal.fire('berhasil', response.sukses, 'success');
                     tampilDataDetail();
-                    ambilTotalHarga();
                     kosong();
                 }
             },
@@ -223,7 +195,6 @@ function simpanItem(){
 }
 
 $(document).ready(function () {
-    ambilTotalHarga();
     tampilDataDetail();
 
     $('#tombolCariBarang').click(function (e) { 
@@ -264,7 +235,6 @@ $(document).ready(function () {
                 if (response.sukses) {
                     Swal.fire('berhasil', response.sukses, 'success');
                     tampilDataDetail();
-                    ambilTotalHarga();
                     kosong();
                     $('#kodebarang').prop('readonly', false);
                     $('#tombolCariBarang').prop('disabled', false);

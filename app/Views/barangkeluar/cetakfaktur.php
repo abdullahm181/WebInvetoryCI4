@@ -11,7 +11,7 @@
         <tr>
             <td  colspan="2">
                 <h3 style="height: 2px;">Gudang Parsial</h3>
-                <h5>ALAMAT TOKO NULL</h5>
+                <h5>PT. SURYA CITRA UTAMA MANDIRI</h5>
                 <hr style="border: none; border-top: 1px solid #000;">
             </td>
         </tr>
@@ -38,11 +38,9 @@
                     <?php 
                         $totalItem = 0;
                         $jmlItem = 0;
-                        $totalHarga = 0;
                         foreach($detailbarang->getResultArray() as $row) :
                             $totalItem += $row['detjml'];
                             $jmlItem++;
-                            $totalHarga += $row['detsubtotal'];
                     ?>
                     <tr>
                         <td colspan="3"><?= $row['brgnama']; ?></td>

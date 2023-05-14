@@ -33,9 +33,7 @@ Data Transaksi Barang Keluar
             <th>Faktur</th>
             <th>Tanggal</th>
             <th>Pelanggan</th>
-            <th>Payment<br>Method</th>
-            <th>Status</th>
-            <th>Total Harga (Rp)</th>
+            <th>Jumlah Item</th>
             <th width="100px">Aksi</th>
         </tr>
     </thead>
@@ -43,15 +41,31 @@ Data Transaksi Barang Keluar
 
     </tbody>
 </table>
+<div class="viewmodal" style="display: none;"></div>
 
 <?= $this->endSection() ?>
 
 <?= $this->section('javascript') ?>
 <script type="text/javascript">
-     function cektransaksi(faktur) {
-        window.location.href = '/barangkeluar/cektransaksi/' + faktur;
-    }
-
+     function detailItem(faktur){
+    $.ajax({
+        type: "post",
+        url: "/Barangkeluar/detailItem",
+        data: {
+            faktur : faktur
+        },
+        dataType: "json",
+        success: function (response) {
+            if (response.data){
+                $('.viewmodal').html(response.data).show();
+                $('#modalitem').modal('show');
+            }
+        },
+        error: function(xhr, ajaxOptions, thrownError){
+            alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+        }
+    });
+}
     function listDataBarangKeluar() {
         var table = $('#databarangkeluar').DataTable({
             destroy: true,

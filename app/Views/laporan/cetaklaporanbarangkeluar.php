@@ -48,28 +48,21 @@
                                     <tbody>
                                         <?php
                                         $no = 1;
-                                        $totalSeluruhHarga = 0;
                                         foreach ($datalaporan->getResultArray() as $row) :
-                                            $totalSeluruhHarga += $row['totalharga'];
+                                            $db = \Config\Database::connect();
+                                $jumlahItem = $db->table('detail_barangkeluar')->where('detfaktur', $row['faktur'])->countAllResults();
                                         ?>
                                             <tr>
                                                 <td><?= $no++; ?></td>
                                                 <td><?= $row['faktur']; ?></td>
                                                 <td><?= $row['tglfaktur']; ?></td>
                                                 <td style="text-align: right;">
-                                                    <?= number_format($row['totalharga'], 0, ",", ".") ?>
+                                                    <?= number_format($jumlahItem, 0, ",", ".") ?>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th colspan="3">Total Seluruh Harga</th>
-                                            <th style="text-align: right;">
-                                                <?= number_format($totalSeluruhHarga, 0, ",", ".") ?>
-                                            </th>
-                                        </tr>
-                                    </tfoot>
+                                    
                                 </table>
                             </center>
                             <br>

@@ -1,7 +1,7 @@
 <?= $this->extend('main/layout') ?>
 
 <?= $this->section('judul') ?>
-Edit Barang Masuk
+Edit Barang Permintaan
 <?= $this->endSection() ?>
 
 <?= $this->section('subjudul') ?>

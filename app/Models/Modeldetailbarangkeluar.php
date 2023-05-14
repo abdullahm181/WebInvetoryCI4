@@ -9,7 +9,7 @@ class Modeldetailbarangkeluar extends Model
 {
     protected $table            = 'detail_barangkeluar';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['detfaktur', 'detbrgkode', 'dethargajual', 'detjml', 'detsubtotal'];
+    protected $allowedFields    = ['detfaktur', 'detbrgkode', 'detjml'];
 
     protected $dt;
     public function __construct() {
@@ -27,18 +27,6 @@ class Modeldetailbarangkeluar extends Model
                     ->get();
     }
 
-    public function ambilTotalHarga($nofaktur){
-        $query = $this->table('detail_barangkeluar')->getWhere([
-            'detfaktur' => $nofaktur
-        ]);
-
-        $totalHarga =  0;
-        foreach ($query->getResultArray() as $r) :
-            $totalHarga += $r['detsubtotal'];
-        endforeach;
-
-        return $totalHarga;
-    }
     private function _get_datatables_query($tglawal, $tglakhir)
   {
       if ($tglawal=='' && $tglakhir==''){
@@ -74,5 +62,10 @@ class Modeldetailbarangkeluar extends Model
         }
 
         return $tbl_storage->countAllResults();
+    }
+    public function dataDetail($faktur){
+        $data=$this->table('detail_barangkeluar')->join('barang','brgkode=detbrgkode')->where('detfaktur', $faktur)->get();
+        
+        return $data;
     }
 }

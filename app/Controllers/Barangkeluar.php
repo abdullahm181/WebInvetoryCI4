@@ -5,11 +5,9 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\Modelbarang;
 use App\Models\ModelBarangKeluar;
-use App\Models\Modelbarangmasuk;
-use App\Models\ModelDataBarang;
-use App\Models\ModelDataBarangKeluar;
+
 use App\Models\ModelDetailBarangKeluar;
-use App\Models\ModelPelanggan;
+
 use App\Models\ModelTempBarangKeluar;
 use Config\Services;
 
@@ -76,19 +74,10 @@ class Barangkeluar extends BaseController
                 $no++;
                 $row = [];
 
-                $tombolCetak = "<button type=\"button\" class=\"btn btn-sm btn-info\" onclick=\"cetak('" . $list->faktur . "')\"><i class=\"fa fa-print\"></i></button>";
 
-                if ($list->transaction_status == 'settlement') {
-                    $tombolHapus = '';
-                } else {
-                    $tombolHapus = "<button type=\"button\" class=\"btn btn-sm btn-danger\" onclick=\"hapus('" . $list->faktur . "')\"><i class=\"fa fa-trash-alt\"></i></button>";
-                }
+                $tombolHapus = "<button type=\"button\" class=\"btn btn-sm btn-danger\" onclick=\"hapus('" . $list->faktur . "')\"><i class=\"fa fa-trash-alt\"></i></button>";
 
-                if ($list->payment_method == 'M') {
-                    $tombolEdit = "<button type=\"button\" class=\"btn btn-sm bg-purple\" onclick=\"cektransaksi('" . $list->faktur . "')\"><i class=\"fa fa-eye\"></i></button>";
-                } else {
-                    $tombolEdit = "<button type=\"button\" class=\"btn btn-sm btn-primary\" onclick=\"edit('" . $list->faktur . "')\"><i class=\"fa fa-pencil-alt\"></i></button>";
-                }
+                $tombolEdit = "<button type=\"button\" class=\"btn btn-sm btn-primary\" onclick=\"edit('" . $list->faktur . "')\"><i class=\"fa fa-pencil-alt\"></i></button>";
 
 
                 $row[] = $no;
@@ -96,23 +85,12 @@ class Barangkeluar extends BaseController
                 $row[] = $list->tglfaktur;
                 $row[] = $list->namapelanggan;
 
-                $row[] = ($list->payment_method == 'M') ? "<span class=\"badge badge-info\">Midtrans</span>" : "<span class=\"badge bg-purple\">Cash</span>";
+                $db = \Config\Database::connect();
+                $jumlahItem = $db->table('detail_barangkeluar')->where('detfaktur', $list->faktur)->countAllResults();
+                $row[] ="<span style=\"cursor: pointer; font-weight: bold; color: blue;\" onclick=\"detailItem('".$list->faktur."')\">$jumlahItem</span>";
+                
 
-                // Menampilkan status Transaksi 
-                if ($list->payment_method == 'M') {
-                    if ($list->transaction_status == 'pending') {
-                        $row[] = "<span class=\"badge bg-gray\">Pending</span>";
-                    } else if ($list->transaction_status == 'settlement') {
-                        $row[] = "<span class=\"badge bg-success\">Success</span>";
-                    } else {
-                        $row[] = "<span class=\"badge bg-danger\">Expired</span>";
-                    }
-                } else {
-                    $row[] = "<span class=\"badge badge-warning\"><i class=\"fa fa-check\"></i></span>";
-                }
-
-                $row[] = number_format($list->totalharga, 0, ",", ".");
-                $row[] = $tombolCetak . " " . $tombolHapus . " " . $tombolEdit;
+                $row[] =  $tombolHapus . " " . $tombolEdit;
                 $row[] = '';
                 $data[] = $row;
             }
@@ -124,7 +102,24 @@ class Barangkeluar extends BaseController
             ];
             echo json_encode($output);
     }
+    public function detailItem()
+    {
+        if ($this->request->isAjax()) {
+            $faktur = $this->request->getPost('faktur');
+            $modelDetail = new ModelDetailBarangKeluar();
 
+            $data = [
+                'tampildatadetail' => $modelDetail->dataDetail($faktur)
+            ];
+
+            $json = [
+                'data' => view('barangkeluar/modaldetailitem', $data)
+            ];
+            echo json_encode($json);
+        } else {
+            exit('Maaf tidak bisa diproses');
+        }
+    }
     public function input()
     {
         $data = [
@@ -166,8 +161,7 @@ class Barangkeluar extends BaseController
                 ];
             } else {
                 $data = [
-                    'namabarang' => $cekData['brgnama'],
-                    'hargajual' => $cekData['brgharga']
+                    'namabarang' => $cekData['brgnama']
                 ];
 
                 $json = [
@@ -186,7 +180,6 @@ class Barangkeluar extends BaseController
             $kodebarang = $this->request->getPost('kodebarang');
             $namabarang = $this->request->getPost('namabarang');
             $jml = $this->request->getPost('jml');
-            $hargajual = $this->request->getPost('hargajual');
 
             $modelTempBarangKeluar = new ModelTempBarangKeluar();
             $modelBarang = new Modelbarang();
@@ -203,9 +196,7 @@ class Barangkeluar extends BaseController
                 $modelTempBarangKeluar->insert([
                     'detfaktur' => $nofaktur,
                     'detbrgkode' => $kodebarang,
-                    'dethargajual' => $hargajual,
-                    'detjml' => $jml,
-                    'detsubtotal' => intval($jml) * intval($hargajual)
+                    'detjml' => $jml
                 ]);
 
                 $json = [
@@ -262,7 +253,6 @@ class Barangkeluar extends BaseController
                 $row[] = $no;
                 $row[] = $list->brgkode;
                 $row[] = $list->brgnama;
-                $row[] = number_format($list->brgharga, 0, ",", ".");
                 $row[] = number_format($list->brgstok, 0, ",", ".");
                 $row[] = $tombolPilih;
                 $data[] = $row;
@@ -281,7 +271,6 @@ class Barangkeluar extends BaseController
         $nofaktur =  $this->request->getPost('nofaktur');
         $tglfaktur =  $this->request->getPost('tglfaktur');
         $namapelanggan =  $this->request->getPost('namapelanggan');
-        $totalharga =  $this->request->getPost('totalharga');
 
         $modelTemp =  new ModelTempBarangKeluar();
         $cekData = $modelTemp->tampilDataTemp($nofaktur);
@@ -289,7 +278,6 @@ class Barangkeluar extends BaseController
         if ($cekData->getNumRows() > 0) {
             $data = [
                 'nofaktur' => $nofaktur,
-                'totalharga' => $totalharga,
                 'tglfaktur' => $tglfaktur,
                 'namapelanggan' => $namapelanggan
             ];
@@ -306,31 +294,19 @@ class Barangkeluar extends BaseController
         echo json_encode($json);
     }
 
-    public function simpanPembayaran()
+    public function simpantransaksi()
     {
         if ($this->request->isAJAX()) {
             $nofaktur = $this->request->getPost('nofaktur');
             $tglfaktur = $this->request->getPost('tglfaktur');
             $namapelanggan = $this->request->getPost('namapelanggan');
-            $totalbayar = str_replace(".", "", $this->request->getPost('totalbayar'));
-            $jumlahuang = str_replace(".", "", $this->request->getPost('jumlahuang'));
-            $sisauang = str_replace(".", "", $this->request->getPost('sisauang'));
-
-            if($sisauang<0){
-                $json = [
-                    'gagal' => 'Transaksi uang cash kurang',
-                ];
-            }else{
-                $modelBarangKeluar =  new ModelBarangKeluar();
+           
+            $modelBarangKeluar =  new ModelBarangKeluar();
 
                 $modelBarangKeluar->insert([
                     'faktur' => $nofaktur,
                     'tglfaktur' => $tglfaktur,
                     'namapelanggan' => $namapelanggan,
-                    'totalharga' => $totalbayar,
-                    'jumlahuang' => $jumlahuang,
-                    'sisauang' => $sisauang,
-                    'payment_method' => 'C',
                     'inputby'=>session()->get('userid')
                 ]);
     
@@ -344,9 +320,7 @@ class Barangkeluar extends BaseController
                     $fieldDetail[] = [
                         'detfaktur' => $row['detfaktur'],
                         'detbrgkode' => $row['detbrgkode'],
-                        'dethargajual' => $row['dethargajual'],
-                        'detjml' => $row['detjml'],
-                        'detsubtotal' => $row['detsubtotal'],
+                        'detjml' => $row['detjml']
                     ];
                     $data = $modelBarang->get_by_kode($row['detbrgkode']);
                     $data['brgstok']=$data['brgstok']-$row['detjml'];
@@ -359,192 +333,16 @@ class Barangkeluar extends BaseController
                 $modelTemp->hapusData($nofaktur);
     
                 $json = [
-                    'sukses' => 'Transaksi berhasil disimpan',
-                    'cetakfaktur' => site_url('barangkeluar/cetakfaktur/' . $nofaktur)
+                    'sukses' => 'Transaksi berhasil disimpan'
                 ];
-            }
             
 
             echo json_encode($json);
         }
     }
 
-    // public function payMidtrans()
-    // {
-    //     if ($this->request->isAJAX()) {
-    //         $nofaktur =  $this->request->getPost('nofaktur');
-    //         $tglfaktur =  $this->request->getPost('tglfaktur');
-    //         $namapelanggan =  $this->request->getPost('namapelanggan');
-    //         $totalharga =  $this->request->getPost('totalharga');
-
-    //         $modelTemp =  new ModelTempBarangKeluar();
-    //         $cekData = $modelTemp->tampilDataTemp($nofaktur);
-
-    //         if ($cekData->getNumRows() > 0) {
-    //             $modelPelanggan = new ModelPelanggan();
-    //             $rowPel = $modelPelanggan->find($namapelanggan);
-    //             $namaPelanggan = $rowPel['namapelanggan'];
-    //             $telpPelanggan = $rowPel['peltelp'];
-
-    //             // Set your Merchant Server Key
-    //             \Midtrans\Config::$serverKey = 'SB-Mid-server-K5H0XsWr8DnRAjxqvlbqrtE-';
-    //             // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-    //             \Midtrans\Config::$isProduction = false;
-    //             // Set sanitization on (default)
-    //             \Midtrans\Config::$isSanitized = true;
-    //             // Set 3DS transaction for credit card to true
-    //             \Midtrans\Config::$is3ds = true;
-
-    //             $dataTempBarangKeluar = [];
-    //             foreach ($cekData->getResultArray() as $x) :
-    //                 $dataTempBarangKeluar[] = [
-    //                     'id'       => $x['detbrgkode'],
-    //                     'price'    => $x['dethargajual'],
-    //                     'quantity' => $x['detjml'],
-    //                     'name'     => $x['brgnama']
-    //                 ];
-    //             endforeach;
-
-    //             // $items = array(
-    //             //     array(
-    //             //         'id'       => 'item1',
-    //             //         'price'    => 100000,
-    //             //         'quantity' => 1,
-    //             //         'name'     => 'Adidas f50'
-    //             //     ),
-    //             //     array(
-    //             //         'id'       => 'item2',
-    //             //         'price'    => 50000,
-    //             //         'quantity' => 2,
-    //             //         'name'     => 'Nike N90'
-    //             //     )
-    //             // );
-
-    //             $customer_details = array(
-    //                 'first_name' => $namaPelanggan,
-    //                 'phone'      => $telpPelanggan,
-    //                 'email'      => 'rendipriyadi0410@gmail.com'
-    //             );
-
-    //             $params = [
-    //                 'transaction_details' => array(
-    //                     'order_id' => rand(),
-    //                     'gross_amount' => 500000,
-    //                 ),
-    //                 'item_details' => $dataTempBarangKeluar,
-    //                 'customer_details' => $customer_details,
-    //             ];
-
-    //             $json = [
-    //                 'nofaktur' => $nofaktur,
-    //                 'tglfaktur' => $tglfaktur,
-    //                 'namapelanggan' => $namapelanggan,
-    //                 'totalharga' => $totalharga,
-    //                 'snapToken' => \Midtrans\Snap::getSnapToken($params)
-    //             ];
-    //         } else {
-    //             $json = [
-    //                 'error' => 'Maaf item belum ada'
-    //             ];
-    //         }
-
-    //         echo json_encode($json);
-    //     }
-    // }
-
-    public function finishMidtrans()
-    {
-        if ($this->request->isAJAX()) {
-            $nofaktur = $this->request->getPost('nofaktur');
-            $namapelanggan = $this->request->getPost('namapelanggan');
-            $tglfaktur = $this->request->getPost('tglfaktur');
-            $totalharga = $this->request->getPost('totalharga');
-            $order_id = $this->request->getPost('order_id');
-            $payment_type = $this->request->getPost('payment_type');
-            $transaction_status = $this->request->getPost('transaction_status');
-
-            $modelBarangKeluar = new ModelBarangKeluar();
-            $modelBarangKeluar->insert([
-                'faktur' => $nofaktur,
-                'tglfaktur' => $tglfaktur,
-                'namapelanggan' => $namapelanggan,
-                'totalharga' => $totalharga,
-                'payment_method' => 'M',
-                'order_id' => $order_id,
-                'payment_type' => $payment_type,
-                'transaction_status' => $transaction_status,
-                'inputby'=>session()->get('userid')
-            ]);
-
-            $modelTemp = new ModelTempBarangKeluar();
-            $dataTemp = $modelTemp->getWhere(['detfaktur' => $nofaktur]);
-
-            $fieldDetail = [];
-            foreach ($dataTemp->getResultArray() as $row) {
-                $fieldDetail[] = [
-                    'detfaktur' => $row['detfaktur'],
-                    'detbrgkode' => $row['detbrgkode'],
-                    'dethargajual' => $row['dethargajual'],
-                    'detjml' => $row['detjml'],
-                    'detsubtotal' => $row['detsubtotal'],
-                ];
-            }
-
-            $modelDetail = new ModelDetailBarangKeluar();
-            $modelDetail->insertBatch($fieldDetail);
-
-            $modelTemp->hapusData($nofaktur);
-
-            $json = [
-                'sukses' => 'Transaksi Berhasil, Silahkan Lakukan Pembayaran'
-            ];
-
-            echo json_encode($json);
-        }
-    }
-
-    // public function cektransaksi($faktur)
-    // {
-    //     $modelBarangKeluar = new ModelBarangKeluar();
-    //     $cekData = $modelBarangKeluar->find($faktur);
-
-    //     if ($cekData) {
-    //         // Set your Merchant Server Key
-    //         \Midtrans\Config::$serverKey = 'SB-Mid-server-K5H0XsWr8DnRAjxqvlbqrtE-';
-    //         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-    //         \Midtrans\Config::$isProduction = false;
-    //         // Set sanitization on (default)
-    //         \Midtrans\Config::$isSanitized = true;
-    //         // Set 3DS transaction for credit card to true
-    //         \Midtrans\Config::$is3ds = true;
-
-    //         $namapelanggan = $cekData['namapelanggan'];
-    //         $modelPelanggan = new ModelPelanggan();
-    //         $dataPel = $modelPelanggan->find($namapelanggan);
-
-    //         $namaPelanggan = $dataPel['namapelanggan'];
-    //         $telp = $dataPel['peltelp'];
-
-    //         // update status transaksi
-    //         $status = \Midtrans\Transaction::status($cekData['order_id']);
-    //         $modelBarangKeluar->update($faktur, [
-    //             'transaction_status' => $status->transaction_status
-    //         ]);
-
-    //         $data = [
-    //             'nofaktur' => $faktur,
-    //             'tglfaktur' => $cekData['tglfaktur'],
-    //             'namapelanggan' => $namaPelanggan,
-    //             'telp' => $telp,
-    //             'orderid' => $cekData['order_id'],
-    //             'status_transaksi' => $status->transaction_status
-    //         ];
-
-    //         return view('barangkeluar/cektransaksimidtrans', $data);
-    //     } else {
-    //         exit('Data tidak ditemukan');
-    //     }
-    // }
+    
+    
 
     public function cetakfaktur($faktur)
     {
@@ -560,8 +358,6 @@ class Barangkeluar extends BaseController
                 'tanggal' => $cekData['tglfaktur'],
                 'namapelanggan' => $cekData['namapelanggan'],
                 'detailbarang' => $modelDetail->tampilDataTemp($faktur),
-                'jumlahuang' => $cekData['jumlahuang'],
-                'sisauang' => $cekData['sisauang']
             ];
 
             return view('barangkeluar/cetakfaktur', $data);
@@ -625,21 +421,7 @@ class Barangkeluar extends BaseController
         return view('barangkeluar/formedit', $data);
     }
 
-    public function ambilTotalHarga()
-    {
-        if ($this->request->isAJAX()) {
-            $nofakur = $this->request->getPost('nofaktur');
-
-            $modelDetail = new ModelDetailBarangKeluar();
-            $totalHarga = $modelDetail->ambilTotalHarga($nofakur);
-
-            $json = [
-                'totalharga' => "Rp." . " " . number_format($totalHarga, 0, ",", ".")
-            ];
-
-            echo json_encode($json);
-        }
-    }
+    
 
     public function tampilDataDetail()
     {
@@ -677,13 +459,6 @@ class Barangkeluar extends BaseController
             $modelBarang->update($data['brgid'], $data);
             $modelDetail->delete($id);
 
-            $totalHarga =  $modelDetail->ambilTotalHarga($noFaktur);
-
-            // Lakukan update total harga ditabel barang keluar
-
-            $modelBarangKeluar->update($noFaktur, [
-                'totalharga' => $totalHarga
-            ]);
 
             $json = [
                 'sukses' => 'Item Berhasil dihapus'
@@ -717,21 +492,15 @@ class Barangkeluar extends BaseController
                 $update =$modelBarang->update($data['brgid'], $data);
     
                 $noFaktur = $rowData['detfaktur'];
-                $hargajual = $rowData['dethargajual'];
+                
     
                 // update pada data tabel detail
     
                 $modelDetail->update($iddetail, [
                     'detjml' => $jml,
-                    'detsubtotal' => intval($hargajual) * $jml
                 ]);
     
-                // ambil total hargga
-                $totalHarga = $modelDetail->ambilTotalHarga($noFaktur);
-                // update barang keluar
-                $modelBarangKeluar->update($noFaktur, [
-                    'totalharga' => $totalHarga
-                ]);
+                
     
                 $json = [
                     'sukses' => 'Item Berhasil di update'
@@ -752,8 +521,7 @@ class Barangkeluar extends BaseController
             $kodebarang = $this->request->getVar('kodebarang');
             $namabarang = $this->request->getVar('namabarang');
             $jml = $this->request->getVar('jml');
-            $hargajual = $this->request->getVar('hargajual');
-
+           
             $modelTempBarangKeluar = new ModelDetailBarangKeluar();
             $modelBarang = new Modelbarang();
 
@@ -769,9 +537,7 @@ class Barangkeluar extends BaseController
                 $modelTempBarangKeluar->insert([
                     'detfaktur' => $nofaktur,
                     'detbrgkode' => $kodebarang,
-                    'dethargajual' => $hargajual,
-                    'detjml' => $jml,
-                    'detsubtotal' => $jml * $hargajual
+                    'detjml' => $jml
                 ]);
 
                 //update stock barang 
@@ -781,13 +547,7 @@ class Barangkeluar extends BaseController
                 $update =$modelBarang->update($data['brgid'], $data);
                 $modelBarangKeluar = new ModelBarangKeluar();
 
-                // ambil total hargga
-                $totalHarga = $modelTempBarangKeluar->ambilTotalHarga($nofaktur);
-                // update barang keluar
-                $modelBarangKeluar->update($nofaktur, [
-                    'totalharga' => $totalHarga
-                ]);
-
+                
                 $json = [
                     'sukses' => 'Item Berhasil ditambahkan'
                 ];

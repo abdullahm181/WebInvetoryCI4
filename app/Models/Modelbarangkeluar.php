@@ -9,14 +9,10 @@ class Modelbarangkeluar extends Model
   protected $table            = 'barangkeluar';
   protected $primaryKey       = 'faktur';
   protected $allowedFields    = [
-    'faktur', 'tglfaktur', 'namapelanggan', 'totalharga', 'jumlahuang', 'sisauang',
-    'order_id', 'payment_type', 'payment_method', 'transaction_status','inputby'
+    'faktur', 'tglfaktur', 'namapelanggan','inputby'
   ];
 
-  protected $column_order = array(null, 'faktur', 'tglfaktur', 'namapelanggan','payment_method','transaction_status', 'totalharga', null);
-    protected $column_search = array('faktur', 'tglfaktur', 'namapelanggan');
-    protected $order = array('tglfaktur' => 'ASC');
-    protected $request;
+  
     protected $db;
     protected $dt;
   public function __construct()
@@ -60,15 +56,6 @@ class Modelbarangkeluar extends Model
               ->where('tglfaktur <=', $tglakhir);
       }
 
-      $i = 0;
-      foreach ($this->column_search as $item) {
-          $i++;
-      }
-
-      if (isset($this->order)) {
-          $order = $this->order;
-          $this->dt->orderBy(key($order), $order[key($order)]);
-      }
   }
   function get_datatables($tglawal, $tglakhir)
   {

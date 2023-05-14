@@ -41,35 +41,29 @@
                                         <tr>
                                             <th>No</th>
                                             <th>No. Faktur</th>
+                                            <th>No. Surat Jalan</th>
                                             <th>Tanggal</th>
-                                            <th>Total Harga (Rp)</th>
+                                            <th>Total Item</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         $no = 1;
-                                        $totalSeluruhHarga = 0;
                                         foreach ($datalaporan->getResultArray() as $row) :
-                                            $totalSeluruhHarga += $row['totalharga'];
+                                            $db = \Config\Database::connect();
+                                $jumlahItem = $db->table('detail_barangmasuk')->where('detfaktur', $row['faktur'])->countAllResults();
                                         ?>
                                             <tr>
                                                 <td><?= $no++; ?></td>
                                                 <td><?= $row['faktur']; ?></td>
+                                                <td><?= $row['nosuratjalan']; ?></td>
                                                 <td><?= $row['tglfaktur']; ?></td>
                                                 <td style="text-align: right;">
-                                                    <?= number_format($row['totalharga'], 0, ",", ".") ?>
+                                                    <?= number_format($jumlahItem, 0, ",", ".") ?>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th colspan="3">Total Seluruh Harga</th>
-                                            <th style="text-align: right;">
-                                                <?= number_format($totalSeluruhHarga, 0, ",", ".") ?>
-                                            </th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </center>
                             <br>
@@ -132,6 +126,7 @@
                                             <th>Kode Barang</th>
                                             <th>Tanggal Masuk</th>
                                             <th>Faktur</th>
+                                            <th>No Surat Jalan</th>
                                             <th>Jumlah</th>
                                             <th>Input By</th>
                                         </tr>
@@ -149,6 +144,7 @@
                                                 <td><?= $row->brgkode; ?></td>
                                                 <td><?= $row->tglfaktur; ?></td>
                                                 <td><?= $row->faktur; ?></td>
+                                                <th><?= $row->nosuratjalan; ?></th>
                                                 <td >
                                                     <?= number_format($row->detjml, 0, ",", ".") ?>
                                                 </td>

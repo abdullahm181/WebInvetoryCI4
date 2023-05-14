@@ -15,7 +15,6 @@
                     <th>No</th>
                     <th>Kode Barang</th>
                     <th>Nama Barang</th>
-                    <th>Harga</th>
                     <th>Stok</th>
                     <th>Aksi</th>
                 </tr>
@@ -52,7 +51,7 @@ function listDataBarang(){
             "type": "POST",
         },
         "columnDefs" : [{
-            "targets" : [0, 5],
+            "targets" : [0, 4],
             "orderable" : false,
         },],
     });
