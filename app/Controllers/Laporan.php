@@ -27,6 +27,11 @@ class Laporan extends BaseController
         return view('laporan/viewbarangkeluar');
     }
 
+    public function stokakhir()
+    {
+        return view('laporan/viewstokakhir');
+    }
+
     public function listDataDetailBarangMasuk()
     {
         $tglawal = $this->request->getPost('tglawal');
@@ -36,35 +41,35 @@ class Laporan extends BaseController
         $datamodel = new Modeldetailbarangmasuk();
         $lists = $datamodel->get_datatables($tglawal, $tglakhir);
 
-            
-            $data = [];
-            $no = $request->getPost("start");
-            foreach ($lists as $list) {
-                //print_r($list);
-                $no++;
-                $row = [];
 
-                
+        $data = [];
+        $no = $request->getPost("start");
+        foreach ($lists as $list) {
+            //print_r($list);
+            $no++;
+            $row = [];
 
-                $row[] = $no;
-                $row[] = $list->brgnama;
-                $row[] = $list->brgkode;
-                $row[] = $list->tglfaktur;
 
-                
 
-                $row[] = number_format($list->detjml, 0, ",", ".");
-                $row[] = $list->usernamalengkap;
-           
-                $data[] = $row;
-            }
-            $output = [
-                "draw" => $request->getPost('draw'),
-                "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
-                "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
-                "data" => $data
-            ];
-            echo json_encode($output);
+            $row[] = $no;
+            $row[] = $list->brgnama;
+            $row[] = $list->brgkode;
+            $row[] = $list->tglfaktur;
+
+
+
+            $row[] = number_format($list->detjml, 0, ",", ".");
+            $row[] = $list->usernamalengkap;
+
+            $data[] = $row;
+        }
+        $output = [
+            "draw" => $request->getPost('draw'),
+            "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
+            "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
+            "data" => $data
+        ];
+        echo json_encode($output);
     }
     public function listDataDetailBarangKeluar()
     {
@@ -74,35 +79,35 @@ class Laporan extends BaseController
         $datamodel = new Modeldetailbarangkeluar();
         $lists = $datamodel->get_datatables($tglawal, $tglakhir);
 
-            
-            $data = [];
-            $no = $request->getPost("start");
-            foreach ($lists as $list) {
-                //print_r($list);
-                $no++;
-                $row = [];
 
-                
+        $data = [];
+        $no = $request->getPost("start");
+        foreach ($lists as $list) {
+            //print_r($list);
+            $no++;
+            $row = [];
 
-                $row[] = $no;
-                $row[] = $list->brgnama;
-                $row[] = $list->brgkode;
-                $row[] = $list->tglfaktur;
 
-                
 
-                $row[] = number_format($list->detjml, 0, ",", ".");
-                $row[] = $list->usernamalengkap;
-           
-                $data[] = $row;
-            }
-            $output = [
-                "draw" => $request->getPost('draw'),
-                "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
-                "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
-                "data" => $data
-            ];
-            echo json_encode($output);
+            $row[] = $no;
+            $row[] = $list->brgnama;
+            $row[] = $list->brgkode;
+            $row[] = $list->tglfaktur;
+
+
+
+            $row[] = number_format($list->detjml, 0, ",", ".");
+            $row[] = $list->usernamalengkap;
+
+            $data[] = $row;
+        }
+        $output = [
+            "draw" => $request->getPost('draw'),
+            "recordsTotal" => $datamodel->count_all($tglawal, $tglakhir),
+            "recordsFiltered" => $datamodel->count_filtered($tglawal, $tglakhir),
+            "data" => $data
+        ];
+        echo json_encode($output);
     }
 
     public function cetak_barang_masuk_periode()
@@ -119,13 +124,13 @@ class Laporan extends BaseController
         $datagroup = $db->query("SELECT barang.brgnama AS brgnama,barang.brgkode as brgkode,sum(detail_barangmasuk.detjml) as QTY FROM barangmasuk 
         LEFT JOIN detail_barangmasuk ON barangmasuk.faktur=detail_barangmasuk.detfaktur  LEFT JOIN barang on detail_barangmasuk.detbrgkode=barang.brgkode WHERE barangmasuk.tglfaktur >= '$tglawal' AND barangmasuk.tglfaktur <='$tglakhir' group by barang.brgnama,barang.brgkode ORDER BY barang.brgkode ASC");
         $datamodel = new Modeldetailbarangmasuk();
-         $datadetail = $datamodel->get_datatables($tglawal, $tglakhir);
+        $datadetail = $datamodel->get_datatables($tglawal, $tglakhir);
 
         if (isset($tombolCetak)) {
             $data = [
                 'datalaporan' => $dataLaporan,
-                'datadetail'=>$datadetail,
-                'datagroup'=>$datagroup,
+                'datadetail' => $datadetail,
+                'datagroup' => $datagroup,
                 'tglawal' => $tglawal,
                 'tglakhir' => $tglakhir
             ];
@@ -228,13 +233,13 @@ class Laporan extends BaseController
         $datagroup =  $db->query("SELECT barang.brgnama AS brgnama, barang.brgkode as brgkode,sum(detail_barangkeluar.detjml) as QTY FROM barangkeluar 
         LEFT JOIN detail_barangkeluar ON barangkeluar.faktur=detail_barangkeluar.detfaktur  LEFT JOIN barang on detail_barangkeluar.detbrgkode=barang.brgkode WHERE barangkeluar.tglfaktur >= '$tglawal' AND barangkeluar.tglfaktur <='$tglakhir' group by barang.brgnama,barang.brgkode ORDER BY barang.brgkode ASC");
         $datamodel = new Modeldetailbarangkeluar();
-         $datadetail = $datamodel->get_datatables($tglawal, $tglakhir);
+        $datadetail = $datamodel->get_datatables($tglawal, $tglakhir);
 
         if (isset($tombolCetak)) {
             $data = [
                 'datalaporan' => $dataLaporan,
-                'datadetail'=>$datadetail,
-                'datagroup'=>$datagroup,
+                'datadetail' => $datadetail,
+                'datagroup' => $datagroup,
                 'tglawal' => $tglawal,
                 'tglakhir' => $tglakhir
             ];
@@ -281,5 +286,60 @@ class Laporan extends BaseController
         ];
 
         echo json_encode($json);
+    }
+
+    public function tampilGrafikStokAkhir()
+    {
+        $db = \Config\Database::connect();
+        // $query = $db->query("SELECT tglfaktur AS tgl, totalharga FROM barangmasuk WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' ORDER BY tglfaktur ASC")->getResult();
+        $query = $db->query("SELECT brgnama,brgstok as QTY FROM barang ORDER BY barang.brgkode ASC")->getResult();
+        //print_r($query);
+        $data = [
+            'grafik' => $query
+        ];
+
+        $json = [
+            'data' => view('laporan/grafikbarangmasuk', $data)
+        ];
+
+        echo json_encode($json);
+    }
+    public function listdatastokakhir()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT brgnama,brgkode ,brgstok,(CASE
+        WHEN biayapenyimpanan = 0 THEN 0
+        ELSE SQRT((2*biayapesan*jumlahkebutuhantahun)/(brgharga*biayapenyimpanan))
+    END) AS EOQ,((penjualantertinggiharian*leadtimeterlama)-(ratapenjualanharian*rataleadtime)) AS SafetyStock,((ratapenjualanharian*rataleadtime)+((penjualantertinggiharian*leadtimeterlama)-(ratapenjualanharian*rataleadtime))) AS ReorderPoint FROM barang  ORDER BY brgkode ASC")->getResult();
+
+        $request = Services::request();
+
+        $data = [];
+        $no = $request->getPost("start");
+        foreach ($query as $list) {
+            //print_r($list);
+            $no++;
+            $row = [];
+
+
+
+            $row[] = $no;
+            $row[] = $list->brgnama;
+            $row[] = $list->brgkode;
+            $row[] = number_format($list->brgstok, 0, ",", ".");
+            $row[] = number_format($list->EOQ, 0, ",", ".");
+            $row[] = number_format($list->SafetyStock, 0, ",", ".");
+            $row[] = number_format($list->ReorderPoint, 0, ",", ".");
+
+
+            $data[] = $row;
+        }
+        $output = [
+            "draw" => $request->getPost('draw'),
+            "recordsTotal" => count( $query ),
+            "recordsFiltered" => count( $query ),
+            "data" => $data
+        ];
+        echo json_encode($output);
     }
 }

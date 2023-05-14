@@ -22,7 +22,11 @@ Cetak Laporan
 
     </div>
     <div class="col-lg-4">
+    <button type="button" class="btn btn-block btn-lg btn-info" style="padding-top: 50px; padding-bottom: 50px;" onclick="window.location=('/laporan/stokakhir')">
+            <i class="fa fa-file"> LAPORAN STOK AKHIR</i>
+        </button>
 
+    </div>
     </div>
 </div>
 
