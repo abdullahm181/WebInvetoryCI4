@@ -19,9 +19,9 @@ Data Transaksi Barang Masuk
                 <tr>
                     <th>No</th>
                     <th>Faktur</th>
+                    <th>No. Surat Jalan</th>
                     <th>Tanggal</th>
                     <th>Jumlah Item</th>
-                    <th>Total Harga (Rp)</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -33,6 +33,7 @@ Data Transaksi Barang Masuk
                     <tr>
                         <td><?= $no++; ?></td>
                         <td><?= $row['faktur']; ?></td>
+                        <td><?= $row['nosuratjalan']; ?></td>
                         <td><?= date('d-m-Y', strtotime($row['tglfaktur'])) ; ?></td>
                         <td align="center">
                             <?php 
@@ -41,7 +42,6 @@ Data Transaksi Barang Masuk
                             ?>
                             <span style="cursor: pointer; font-weight: bold; color: blue;" onclick="detailItem('<?= $row['faktur'] ?>')"><?= $jumlahItem; ?></span>
                         </td>
-                        <td><?= number_format($row['totalharga'], 0, ",", "."); ?></td>
                         <td>
                             <button type="button" class="btn btn-sm btn-outline-info" title="Edit Transaksi" onclick="edit('<?= sha1($row['faktur']) ?>')">
                                 <i class="fa fa-edit"></i>

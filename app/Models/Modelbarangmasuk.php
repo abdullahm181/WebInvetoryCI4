@@ -9,7 +9,7 @@ class Modelbarangmasuk extends Model
     protected $table            = 'barangmasuk';
     protected $primaryKey       = 'faktur';
     protected $allowedFields    = [
-        'faktur', 'tglfaktur', 'totalharga','inputby'
+        'faktur', 'tglfaktur', 'nosuratjalan','inputby'
     ];
 
     public function __construct() {
@@ -36,6 +36,20 @@ class Modelbarangmasuk extends Model
 
     public function laporanPerPeriode($tglawal, $tglakhir){
         return $this->table('barangmasuk')->where('tglfaktur >=', $tglawal)->where('tglfaktur <=', $tglakhir)->get();
+    }
+
+    public function noFakturOtomatis($tanggalSekarang)
+    {
+       $query = $this->table('barangmasuk')
+       ->where('tglfaktur', $tanggalSekarang)
+       ->get();
+  
+          $max = 0;
+          foreach ($query->getResultArray() as $r){
+              if((int)substr($r['faktur'], -4)>$max) $max=(int)substr($r['faktur'], -4);
+          }
+  
+          return $max;
     }
 }
 

@@ -9,7 +9,7 @@ class Modeldetailbarangmasuk extends Model
     protected $table            = 'detail_barangmasuk';
     protected $primaryKey       = 'iddetail';
     protected $allowedFields    = [
-        'detfaktur', 'detbrgkode', 'dethargamasuk', 'dethargajual', 'detjml', 'detsubtotal'
+        'detfaktur', 'detbrgkode', 'detjml'
     ];
     protected $dt;
 
@@ -25,19 +25,7 @@ class Modeldetailbarangmasuk extends Model
         return $data;
     }
 
-    public function ambilTotalHarga($faktur){
-        $query = $this->table('detail_barangmasuk')->getWhere([
-            'detfaktur' => $faktur
-        ]);
-
-        $totalharga = 0;
-        foreach ($query->getResultArray() as $r){
-            $totalharga += $r['detsubtotal'];
-        }
-
-        return $totalharga;
-    }
-
+    
     public function ambilDetailBerdasarkanID($iddetail){
         return $this->table('detail_barangmasuk')
         ->join('barang', 'brgkode=detbrgkode')

@@ -4,10 +4,7 @@
             <th>No</th>
             <th>Kode Barang</th>
             <th>Nama Barang</th>
-            <th>Harga Jual</th>
-            <th>Harga Beli</th>
             <th>Jumlah</th>
-            <th>Sub Total</th>
             <th>#</th>
         </tr>
     </thead>
@@ -21,16 +18,7 @@
                 <td><?= $row->brgkode; ?></td>
                 <td><?= $row->brgnama; ?></td>
                 <td style="text-align: right;">
-                    <?= number_format($row->dethargajual, 0, ",", "."); ?>
-                </td>
-                <td style="text-align: right;">
-                    <?= number_format($row->dethargamasuk, 0, ",", "."); ?>
-                </td>
-                <td style="text-align: right;">
                     <?= number_format($row->detjml, 0, ",", "."); ?>
-                </td>
-                <td style="text-align: right;">
-                    <?= number_format($row->detsubtotal, 0, ",", "."); ?>
                 </td>
                 <td>
                     <button type="button" class="btn btn-sm btn-outline-danger" onclick="hapusItem('<?= $row->iddetail ?>')">

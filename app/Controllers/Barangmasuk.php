@@ -10,9 +10,33 @@ use App\Models\Modeldetailbarangmasuk;
 
 class Barangmasuk extends BaseController
 {
+
     public function index()
     {
         return view('barangmasuk/forminput');
+    }
+
+    public function buatfaktur()
+    {
+        $tanggalSekarang = $this->request->getVar('tanggal');
+        if($tanggalSekarang=='' || $tanggalSekarang==null)
+        $tanggalSekarang = date('Y-m-d');
+        $modelBarangPermintaan = new Modelbarangmasuk();
+
+        $hasil = $modelBarangPermintaan->noFakturOtomatis($tanggalSekarang);
+        // $data = $hasil['nofaktur'];
+
+        // $lastNoUrut = substr($data, -4);
+        // nomor urut ditambah 1
+        $nextNoUrut = intval($hasil) + 1;
+        // membuat format nomor transaksi berikutnya
+        $noFaktur = 'FM'.date('dmy', strtotime($tanggalSekarang)) . sprintf('%04s', $nextNoUrut);
+
+        $json = [
+            'nofaktur' => $noFaktur
+        ];
+
+        echo json_encode($json);
     }
 
     public function dataTemp()
@@ -48,8 +72,7 @@ class Barangmasuk extends BaseController
                 ];
             } else {
                 $data = [
-                    'namabarang' => $ambilData['brgnama'],
-                    'hargajual' => $ambilData['brgharga'],
+                    'namabarang' => $ambilData['brgnama']
                 ];
 
                 $json = [
@@ -70,8 +93,7 @@ class Barangmasuk extends BaseController
             $modelBarangMasuk= new Modelbarangmasuk();
             $cekFaktur=$modelBarangMasuk->find($faktur);
             if($cekFaktur!=null) exit('Maaf tidak bisa diproses, faktur sudah ada');
-            $hargajual = $this->request->getPost('hargajual');
-            $hargabeli = $this->request->getPost('hargabeli');
+           
             $kodebarang = $this->request->getPost('kodebarang');
             $jumlah = $this->request->getPost('jumlah');
             //print_r($kodebarang);//udah bener
@@ -79,10 +101,7 @@ class Barangmasuk extends BaseController
             $modelTempBarang->insert([
                 'detfaktur' => $faktur,
                 'detbrgkode' => $kodebarang,
-                'dethargamasuk' => $hargabeli,
-                'dethargajual' => $hargajual,
-                'detjml' => $jumlah,
-                'detsubtotal' => intval($jumlah) * intval($hargabeli)
+                'detjml' => $jumlah
             ]);
 
             $json = [
@@ -155,6 +174,7 @@ class Barangmasuk extends BaseController
         if ($this->request->isAjax()) {
             $faktur = $this->request->getPost('faktur');
             $tglfaktur = $this->request->getPost('tglfaktur');
+            $nosuratjalan  = $this->request->getPost('nosuratjalan');
 
             $modelTemp = new Modeltempbarangmasuk();
             $dataTemp = $modelTemp->getWhere(['detfaktur' => $faktur]);
@@ -166,16 +186,12 @@ class Barangmasuk extends BaseController
             } else {
                 // simpan ke tabel barang masuk
                 $modelBarangMasuk = new Modelbarangmasuk();
-                $totalSubTotal = 0;
-
-                foreach ($dataTemp->getResultArray() as $total) :
-                    $totalSubTotal += intval($total['detsubtotal']);
-                endforeach;
+                
 
                 $modelBarangMasuk->insert([
                     'faktur' => $faktur,
                     'tglfaktur' => $tglfaktur,
-                    'totalharga' => $totalSubTotal,
+                    'nosuratjalan'=> $nosuratjalan ,
                     'inputby' => session()->get('userid')
                 ]);
 
@@ -186,10 +202,7 @@ class Barangmasuk extends BaseController
                     $modelDetailBarangMasuk->insert([
                         'detfaktur' => $row['detfaktur'],
                         'detbrgkode' => $row['detbrgkode'],
-                        'dethargamasuk' => $row['dethargamasuk'],
-                        'dethargajual' => $row['dethargajual'],
                         'detjml' => $row['detjml'],
-                        'detsubtotal' => $row['detsubtotal']
                     ]);
 
                     //update stock barang 
@@ -251,7 +264,8 @@ class Barangmasuk extends BaseController
 
             $data = [
                 'nofaktur' => $row->faktur,
-                'tanggal' => $row->tglfaktur
+                'tanggal' => $row->tglfaktur,
+                'nosuratjalan'=>$row->nosuratjalan
             ];
 
             return view('barangmasuk/formedit', $data);
@@ -271,10 +285,8 @@ class Barangmasuk extends BaseController
                 'datadetail' => $modelDetail->dataDetail($faktur),
             ];
 
-            $totalHargaFaktur = number_format($modelDetail->ambilTotalHarga($faktur), 0, ",", ".");
             $json = [
-                'data' => view('barangmasuk/datadetail', $data),
-                'totalharga' => $totalHargaFaktur
+                'data' => view('barangmasuk/datadetail', $data)
             ];
             echo json_encode($json);
         } else {
@@ -296,8 +308,6 @@ class Barangmasuk extends BaseController
             $data = [
                 'kodebarang' => $row['detbrgkode'],
                 'namabarang' => $row['brgnama'],
-                'hargajual' => $row['dethargajual'],
-                'hargabeli' => $row['dethargamasuk'],
                 'jumlah' => $row['detjml']
             ];
 
@@ -313,8 +323,6 @@ class Barangmasuk extends BaseController
     {
         if ($this->request->isAjax()) {
             $faktur = $this->request->getPost('faktur');
-            $hargajual = $this->request->getPost('hargajual');
-            $hargabeli = $this->request->getPost('hargabeli');
             $kodebarang = $this->request->getPost('kodebarang');
             $jumlah = $this->request->getPost('jumlah');
 
@@ -324,22 +332,13 @@ class Barangmasuk extends BaseController
             $modelDetail->insert([
                 'detfaktur' => $faktur,
                 'detbrgkode' => $kodebarang,
-                'dethargamasuk' => $hargabeli,
-                'dethargajual' => $hargajual,
                 'detjml' => $jumlah,
-                'detsubtotal' => intval($jumlah) * intval($hargabeli)
             ]);
             //update stock barang 
             $modelBarang = new Modelbarang();
             $data = $modelBarang->get_by_kode($kodebarang);
             $data['brgstok']=$data['brgstok']+$jumlah;
             $update =$modelBarang->update($data['brgid'], $data);
-
-            $ambilTotalHarga = $modelDetail->ambilTotalHarga($faktur);
-
-            $modelBarangMasuk->update($faktur, [
-                'totalharga' => $ambilTotalHarga
-            ]);
 
             $json = [
                 'sukses' => 'Item berhasil ditambahkan'
@@ -355,8 +354,6 @@ class Barangmasuk extends BaseController
         if ($this->request->isAjax()) {
             $iddetail = $this->request->getPost('iddetail');
             $faktur = $this->request->getPost('faktur');
-            $hargajual = $this->request->getPost('hargajual');
-            $hargabeli = $this->request->getPost('hargabeli');
             $kodebarang = $this->request->getPost('kodebarang');
             $jumlah = $this->request->getPost('jumlah');
 
@@ -376,17 +373,10 @@ class Barangmasuk extends BaseController
 
             //update table detailbarang masuk
             $modelDetail->update($iddetail, [
-                'dethargamasuk' => $hargabeli,
-                'dethargajual' => $hargajual,
+                
                 'detjml' => $jumlah,
-                'detsubtotal' => intval($jumlah) * intval($hargabeli)
             ]);
-            //update table barang masuk bagian total harga dalam faktur
-            $ambilTotalHarga = $modelDetail->ambilTotalHarga($faktur);
-
-            $modelBarangMasuk->update($faktur, [
-                'totalharga' => $ambilTotalHarga
-            ]);
+            
 
             $json = [
                 'sukses' => 'Item berhasil diupdate'
@@ -413,12 +403,7 @@ class Barangmasuk extends BaseController
             $update =$modelBarang->update($data['brgid'], $data);
             $modelDetail->delete($id);
 
-            $ambilTotalHarga = $modelDetail->ambilTotalHarga($faktur);
-
-
-            $modelBarangMasuk->update($faktur, [
-                'totalharga' => $ambilTotalHarga
-            ]);
+           
 
             
 

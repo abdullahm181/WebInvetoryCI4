@@ -18,9 +18,15 @@ Edit Barang Masuk
         <td style="width: 20%;">No Faktur</td>
         <td style="width: 2%;">:</td>
         <td style="width: 28%;"><?= $nofaktur ?></td>
-        <td rowspan="3" style="vertical-align: middle; text-align: center; font-weight: bold; font-size: 25pt" id="totalHarga">
-        </td>
+        
         <input type="hidden" id="faktur" value="<?= $nofaktur; ?>">
+    </tr>
+    <tr>
+        <td style="width: 20%;">No Surat Jalan</td>
+        <td style="width: 2%;">:</td>
+        <td style="width: 28%;"><?= $nosuratjalan ?></td>
+        
+        <input type="hidden" id="nosuratjalan" value="<?= $nosuratjalan; ?>">
     </tr>
     <tr>
         <td style="width: 20%;">Tanggal Faktur</td>
@@ -34,7 +40,7 @@ Edit Barang Masuk
   </div>
   <div class="card-body">
     <div class="form-row">
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-4">
             <label for="">Kode Barang</label>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Kode Barang" name="kdbarang" id="kdbarang">
@@ -44,23 +50,15 @@ Edit Barang Masuk
             </div>
             <input type="hidden" id="iddetail" name="iddetail">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-4">
             <label for="">Nama Barang</label>
             <input type="text" class="form-control" name="namabarang" id="namabarang" readonly>
         </div>
         <div class="form-group col-md-2">
-            <label for="">Harga Jual</label>
-            <input type="text" class="form-control" name="hargajual" id="hargajual" readonly>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="">Harga Beli</label>
-            <input type="number" class="form-control" name="hargabeli" id="hargabeli">
-        </div>
-        <div class="form-group col-md-1">
             <label for="">Jumlah</label>
             <input type="number" class="form-control" name="jumlah" id="jumlah">
         </div>
-        <div class="form-group col-md-1">
+        <div class="form-group col-md-2">
             <label for="">Aksi</label>
             <div class="input-group">
             <button type="button" class="btn btn-sm btn-info" title="Tambah Item" id="tombolTambahItem">
@@ -98,7 +96,6 @@ Edit Barang Masuk
         success: function (response) {
             if (response.data){
                 $('#tampilDataDetail').html(response.data);
-                $('#totalHarga').html(response.totalharga);
             }
         },
         error: function(xhr, ajaxOptions, thrownError){
@@ -110,8 +107,6 @@ Edit Barang Masuk
 function kosong(){
     $('#kdbarang').val('');
     $('#namabarang').val('');
-    $('#hargajual').val('');
-    $('#hargabeli').val('');
     $('#jumlah').val('');
     $('#kdbarang').focus();
     $('#tombolEditItem').hide();
@@ -133,8 +128,7 @@ function ambilDataBarang(){
                 if (response.sukses){
                     let data = response.sukses;
                     $('#namabarang').val(data.namabarang);
-                    $('#hargajual').val(data.hargajual);
-                    $('#hargabeli').focus();
+                    $('#jumlah').focus();
                 }
                 if (response.error){
                     alert(response.error);
@@ -164,9 +158,7 @@ $(document).ready(function () {
         e.preventDefault();
         let faktur = $('#faktur').val();
         let kodebarang = $('#kdbarang').val();
-        let hargabeli = $('#hargabeli').val();
         let jumlah = $('#jumlah').val();
-        let hargajual = $('#hargajual').val();
 
         if (faktur.length == 0) {
             Swal.fire({
@@ -176,8 +168,6 @@ $(document).ready(function () {
             })
         }else if(kodebarang.length == 0){
             alert('Maaf, kodebarang wajib diisi');
-        }else if(hargabeli.length == 0){
-            alert('Maaf, hargabeli wajib diisi');
         }else if(jumlah.length == 0){
             alert('Maaf, jumlah wajib diisi');
         }else{
@@ -187,8 +177,6 @@ $(document).ready(function () {
                 data: {
                     faktur : faktur,
                     kodebarang : kodebarang,
-                    hargabeli : hargabeli,
-                    hargajual : hargajual,
                     jumlah : jumlah
                 },
                 dataType: "json",
@@ -210,9 +198,7 @@ $(document).ready(function () {
         e.preventDefault();
         let faktur = $('#faktur').val();
         let kodebarang = $('#kdbarang').val();
-        let hargabeli = $('#hargabeli').val();
         let jumlah = $('#jumlah').val();
-        let hargajual = $('#hargajual').val();
 
         $.ajax({
             type: "post",
@@ -221,8 +207,6 @@ $(document).ready(function () {
                 iddetail : $('#iddetail').val(),
                 faktur : faktur,
                 kodebarang : kodebarang,
-                hargabeli : hargabeli,
-                hargajual : hargajual,
                 jumlah : jumlah
             },
             dataType: "json",

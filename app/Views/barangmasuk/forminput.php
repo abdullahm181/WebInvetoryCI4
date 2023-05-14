@@ -14,11 +14,16 @@ Input Barang Masuk
 
 <?= $this->section('isi') ?>
 <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
         <label for="">Input Faktur Barang Masuk</label>
         <input type="text" class="form-control" placeholder="No. Faktur" name="faktur" id="faktur">
     </div>
-    <div class="form-group col-md-6">
+    
+    <div class="form-group col-md-4">
+        <label for="">Input Nomer Surat Jalan</label>
+        <input type="text" class="form-control" placeholder="No. Surat jalan" name="nosuratjalan" id="nosuratjalan">
+    </div>
+    <div class="form-group col-md-4">
         <label for="">Tanggal Faktur</label>
         <input type="date" class="form-control" name="tglfaktur" id="tglfaktur" value="<?= date('Y-m-d') ?>">
     </div>
@@ -30,7 +35,7 @@ Input Barang Masuk
     </div>
     <div class="card-body">
         <div class="form-row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
                 <label for="">Kode Barang</label>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Kode Barang" name="kdbarang" id="kdbarang">
@@ -40,23 +45,16 @@ Input Barang Masuk
                     </div>
                 </div>
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
                 <label for="">Nama Barang</label>
                 <input type="text" class="form-control" name="namabarang" id="namabarang" readonly>
             </div>
+            
             <div class="form-group col-md-2">
-                <label for="">Harga Jual</label>
-                <input type="text" class="form-control" name="hargajual" id="hargajual" readonly>
-            </div>
-            <div class="form-group col-md-2">
-                <label for="">Harga Beli</label>
-                <input type="number" class="form-control" name="hargabeli" id="hargabeli">
-            </div>
-            <div class="form-group col-md-1">
                 <label for="">Jumlah</label>
                 <input type="number" class="form-control" name="jumlah" id="jumlah">
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-md-2">
                 <label for="">Aksi</label>
                 <div class="input-group">
                     <button type="button" class="btn btn-sm btn-info" title="Tambah Item" id="tombolTambahItem">
@@ -197,8 +195,6 @@ Input Barang Masuk
     function kosong() {
         $('#kdbarang').val('');
         $('#namabarang').val('');
-        $('#hargajual').val('');
-        $('#hargabeli').val('');
         $('#jumlah').val('');
         $('#kdbarang').focus();
     }
@@ -217,8 +213,7 @@ Input Barang Masuk
                 if (response.sukses) {
                     let data = response.sukses;
                     $('#namabarang').val(data.namabarang);
-                    $('#hargajual').val(data.hargajual);
-                    $('#hargabeli').focus();
+                    $('#jumlah').focus();
                 }
                 if (response.error) {
                     alert(response.error);
@@ -231,9 +226,32 @@ Input Barang Masuk
         });
     }
 
+    function buatfaktur() {
+        let tanggal = $('#tglfaktur').val();
+        $.ajax({
+            type: "post",
+            url: "/barangmasuk/buatfaktur",
+            data: {
+                tanggal: tanggal
+            },
+            dataType: "json",
+            success: function(response) {
+                $('#faktur').val(response.nofaktur);
+                dataTemp();
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+        });
+    }
     $(document).ready(function() {
-        dataTemp();
-
+        
+        buatfaktur();
+        
+        $('#tglfaktur').change(function(e) {
+            buatfaktur();
+            
+        });
         $('#kdbarang').keydown(function(e) {
             if (e.keyCode == 13) {
                 e.preventDefault();
@@ -245,9 +263,8 @@ Input Barang Masuk
             e.preventDefault();
             let faktur = $('#faktur').val();
             let kodebarang = $('#kdbarang').val();
-            let hargabeli = $('#hargabeli').val();
             let jumlah = $('#jumlah').val();
-            let hargajual = $('#hargajual').val();
+            let nosuratjalan=$('#nosuratjalan').val();
 
             if (faktur.length == 0) {
                 Swal.fire({
@@ -262,28 +279,25 @@ Input Barang Masuk
                     text: 'Maaf, kodebarang wajib diisi'
                 })
 
-            } else if (hargabeli.length == 0) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Maaf, hargabeli wajib diisi'
-                })
-
             } else if (jumlah.length == 0) {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
                     text: 'Maaf, jumlah wajib diisi'
                 });
-            } else {
+            } else if (nosuratjalan.length == 0) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Maaf, No. Surat Jalan wajib diisi'
+                });
+            }else {
                 $.ajax({
                     type: "post",
                     url: "/barangmasuk/simpanTemp",
                     data: {
                         faktur: faktur,
                         kodebarang: kodebarang,
-                        hargabeli: hargabeli,
-                        hargajual: hargajual,
                         jumlah: jumlah
                     },
                     dataType: "json",
@@ -336,12 +350,19 @@ Input Barang Masuk
         $('#tombolSelesaiTransaksi').click(function(e) {
             e.preventDefault();
             let faktur = $('#faktur').val();
+            let nosuratjalan=$('#nosuratjalan').val();
 
             if (faktur.length == 0) {
                 Swal.fire({
                     icon: 'warning',
                     title: 'Pesan',
                     text: 'Maaf, Faktur tidak boleh kosong'
+                });
+            }else if(nosuratjalan.length ==0){
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Pesan',
+                    text: 'Maaf, No. Surat Jalan tidak boleh kosong'
                 });
             } else {
                 Swal.fire({
@@ -359,6 +380,7 @@ Input Barang Masuk
                             url: "/barangmasuk/selesaiTransaksi",
                             data: {
                                 faktur: faktur,
+                                nosuratjalan:nosuratjalan,
                                 tglfaktur: $('#tglfaktur').val()
                             },
                             dataType: "json",

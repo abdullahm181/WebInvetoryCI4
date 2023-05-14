@@ -9,7 +9,7 @@ class Modeltempbarangmasuk extends Model
     protected $table            = 'temp_barangmasuk';
     protected $primaryKey       = 'iddetail';
     protected $allowedFields    = [
-        'iddetail', 'detfaktur', 'detbrgkode', 'dethargamasuk', 'dethargajual', 'detjml', 'detsubtotal'
+        'iddetail', 'detfaktur', 'detbrgkode', 'detjml'
     ];
     public function __construct() {
         parent::__construct();
