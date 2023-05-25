@@ -10,7 +10,7 @@ class Modelauth extends Model
     protected $table            = 'users';
     protected $primaryKey       = 'userid';
    
-    protected $allowedFields    = ['userid','usernama','userpassword','userlevelid'];
+    protected $allowedFields    = ['userid','usernama','userpassword','userlevelid','isdeleted'];
     public function __construct() {
         parent::__construct();
         //$this->load->database();

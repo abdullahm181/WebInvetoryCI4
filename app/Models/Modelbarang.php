@@ -9,7 +9,7 @@ class Modelbarang extends Model
     protected $table            = 'barang';
     protected $primaryKey       = 'brgid';
 
-    protected $allowedFields    = ['brgid','brgkatid', 'brgsatid', 'brgnama', 'brgkode', 'brgharga', 'brggambar','brgstok','brglokid','jumlahkebutuhantahun','biayapesan','biayapenyimpanan','penjualantertinggiharian','leadtimeterlama','ratapenjualanharian','rataleadtime'];
+    protected $allowedFields    = ['brgid','brgkatid', 'brgsatid', 'brgnama', 'brgkode', 'brgharga', 'brggambar','brgstok','brglokid','jumlahkebutuhantahun','biayapesan','biayapenyimpanan','penjualantertinggiharian','leadtimeterlama','ratapenjualanharian','rataleadtime','isdeleted'];
 
     protected $column_order = array(null, 'brgkode', 'brgnama', null,null,null);
     protected $column_search = array('brgkode', 'brgnama');
@@ -42,11 +42,18 @@ class Modelbarang extends Model
     }
 
     public function tampil_data(){
-        return $this->table('barang')->join('kategori','brgkatid=katid')->join('satuan','brgsatid=satid')->join('lokasi','brglokid=lokid')->get();
+        return $this->table('barang')->join('kategori','brgkatid=katid')->join('satuan','brgsatid=satid')->join('lokasi','brglokid=lokid')->where('barang.isdeleted !=','1')->get();
     }
     public function tampildata_cari($cari)
     {
-        return $this->table('barang')->join('kategori','brgkatid=katid')->join('satuan','brgsatid=satid')->join('lokasi','brglokid=lokid')->orlike('brgkode', $cari)->orlike('brgnama', $cari)->orlike('katnama', $cari);
+        $db = \Config\Database::connect();
+        // $query = $db->query("SELECT tglfaktur AS tgl, totalharga FROM barangmasuk WHERE DATE_FORMAT(tglfaktur, '%Y-%m') = '$bulan' ORDER BY tglfaktur ASC")->getResult();
+        $query = $db->query("SELECT * FROM barang 
+        JOIN kategori ON brgkatid=katid
+        JOIN satuan ON brgsatid=satid
+        JOIN lokasi ON brglokid=lokid
+        WHERE (brgkode like '%$cari%' OR brgnama like '%$cari%' OR katnama like '%$cari%') AND barang.isdeleted != 1")->getResult();
+        return $query ;
     }
 
     public function get_by_kode($kode){
@@ -72,17 +79,17 @@ class Modelbarang extends Model
     {
         $this->_get_datatables_query();
         
-        $query = $this->dt->get();
+        $query = $this->dt->where('isdeleted !=','1')->get();
         return $query->getResult();
     }
     function count_filtered()
     {
         $this->_get_datatables_query();
-        return $this->dt->countAllResults();
+        return $this->dt->where('isdeleted !=','1')->countAllResults();
     }
     public function count_all()
     {
-        $tbl_storage = $this->db->table($this->table);
+        $tbl_storage = $this->db->table($this->table)->where('isdeleted !=','1');
         return $tbl_storage->countAllResults();
     }
 }

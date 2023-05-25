@@ -9,7 +9,7 @@ class Modelkategori extends Model
     protected $table            = 'kategori';
     protected $primaryKey       = 'katid';
     protected $allowedFields    = [
-        'katid','katnama'
+        'katid','katnama','isdeleted'
     ];
     public function __construct() {
         parent::__construct();

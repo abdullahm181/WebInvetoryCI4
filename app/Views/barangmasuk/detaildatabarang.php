@@ -12,16 +12,16 @@
     <tbody>
         <?php 
             $nomor = 1;
-            foreach($tampildata->getResultArray() as $row) :
+            foreach($tampildata as $row) :
         ?>
         <tr>
             <td><?= $nomor++; ?></td>
-            <td><?= $row['brgkode']; ?></td>
-            <td><?= $row['brgnama']; ?></td>
-            <td><?= number_format($row['brgharga'], 0, ",", "."); ?></td>
-            <td><?= number_format($row['brgstok'], 0, ",", "."); ?></td>
+            <td><?= $row->brgkode; ?></td>
+            <td><?= $row->brgnama; ?></td>
+            <td><?= number_format($row->brgharga, 0, ",", "."); ?></td>
+            <td><?= number_format($row->brgstok, 0, ",", "."); ?></td>
             <td>
-                <button type="button" class="btn btn-sm btn-info" onclick="pilih('<?= $row['brgkode'] ?>')">
+                <button type="button" class="btn btn-sm btn-info" onclick="pilih('<?= $row->brgkode ?>')">
                     Pilih
                 </button>
             </td>

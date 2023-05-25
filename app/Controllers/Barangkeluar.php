@@ -154,7 +154,7 @@ class Barangkeluar extends BaseController
 
             $modelBarang = new Modelbarang();
 
-            $cekData = $modelBarang->where('brgkode', $kodebarang)->first();
+            $cekData = $modelBarang->where('brgkode', $kodebarang)->where('isdeleted !=','1')->first();
             if ($cekData == null) {
                 $json = [
                     'error' => 'Maaf data barang tidak ditemukan'
@@ -322,8 +322,10 @@ class Barangkeluar extends BaseController
                         'detbrgkode' => $row['detbrgkode'],
                         'detjml' => $row['detjml']
                     ];
+                    $data['isdeleted']=0;
                     $data = $modelBarang->get_by_kode($row['detbrgkode']);
                     $data['brgstok']=$data['brgstok']-$row['detjml'];
+
                     $modelBarang->update($data['brgid'], $data);
                 }
     
@@ -394,6 +396,7 @@ class Barangkeluar extends BaseController
                 
                 $dataBarang=$modelBarang->where('brgkode',$dt->detbrgkode)->first();
                 $dataBarang['brgstok']=$dataBarang['brgstok']+$dt->detjml;
+                $data['isdeleted']=0;
                 $modelBarang->update($dataBarang['brgid'], $dataBarang);
             }
             $db->table('detail_barangkeluar')->delete(['detfaktur' => $faktur]);
@@ -456,6 +459,7 @@ class Barangkeluar extends BaseController
             $modelBarang = new Modelbarang();
             $data = $modelBarang->get_by_kode($rowData['detbrgkode']);
             $data['brgstok']=($data['brgstok']+$rowData['detjml']);
+            $data['isdeleted']=0;
             $modelBarang->update($data['brgid'], $data);
             $modelDetail->delete($id);
 
@@ -489,6 +493,7 @@ class Barangkeluar extends BaseController
                 ];
             }else{
                 $data['brgstok']=($data['brgstok']+$rowData['detjml'])-$jml;
+                $data['isdeleted']=0;
                 $update =$modelBarang->update($data['brgid'], $data);
     
                 $noFaktur = $rowData['detfaktur'];
@@ -544,6 +549,7 @@ class Barangkeluar extends BaseController
                 $modelBarang = new Modelbarang();
                 $data = $modelBarang->get_by_kode($kodebarang);
                 $data['brgstok']=$data['brgstok']-$jml;
+                $data['isdeleted']=0;
                 $update =$modelBarang->update($data['brgid'], $data);
                 $modelBarangKeluar = new ModelBarangKeluar();
 

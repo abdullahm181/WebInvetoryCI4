@@ -11,7 +11,7 @@ class Lokasi extends BaseController
     {
         $model = new Modellokasi();
         $data = [
-            'tampildata' => $model->orderBy('lokid', 'DESC')->findAll()
+            'tampildata' => $model->where('isdeleted !=','1')->orderBy('lokid', 'DESC')->findAll()
         ];
         return view('lokasi/viewlokasi', $data);
     }
@@ -27,7 +27,8 @@ class Lokasi extends BaseController
             'lokid' => $this->request->getVar('lokid'),
             'loklorong'  => $this->request->getVar('loklorong'),
             'lokrak'  => $this->request->getVar('lokrak'),
-            'lokkode'  => $this->request->getVar('lokkode')
+            'lokkode'  => $this->request->getVar('lokkode'),
+            'isdeleted'=>0
             ];
         if($data['lokid']==0 || $data['lokid']==null ){
             //add
@@ -73,7 +74,7 @@ class Lokasi extends BaseController
 
         $model = new Modellokasi();
 
-        $data = $model->orderBy('lokid', 'DESC')->findAll();
+        $data = $model->where('isdeleted !=','1')->orderBy('lokid', 'DESC')->findAll();
 
         echo json_encode($data);
     }
@@ -97,7 +98,10 @@ class Lokasi extends BaseController
     public function delete($id = null)
     {
         $model = new Modellokasi();
-        $delete = $model->where('lokid', $id)->delete();
+        $data = $model->where('lokid', $id)->first();
+        $data['isdeleted']=1;
+        //$delete = $model->where('lokid', $id)->delete();
+        $delete=$model->update($id, $data);
         if ($delete) {
             echo json_encode(array("status" => true));
         } else {

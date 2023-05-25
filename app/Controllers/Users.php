@@ -19,7 +19,7 @@ class Users extends BaseController
         $request = Services::request();
         $db = \Config\Database::connect();
             $builder = $db->table('users')->select('userid, usernama,usernamalengkap, levelnama, useraktif, userlevelid')
-                ->join('levels', 'levelid = userlevelid')->get()->getResult();
+                ->join('levels', 'levelid = userlevelid')->where('users.isdeleted !=','1')->get()->getResult();
             $data = [];
             $no = $request->getPost("start");
             foreach ($builder as $list) {
@@ -115,6 +115,7 @@ class Users extends BaseController
                     'usernama' => $iduser,
                     'usernamalengkap' => $namalengkap,
                     'userlevelid' => $level,
+                    'isdeleted'=>0
                 ]);
 
                 $json = [
@@ -205,8 +206,10 @@ class Users extends BaseController
         if ($this->request->isAJAX()) {
             $iduser = $this->request->getVar('iduser');
             $modelUser = new Modeluser();
-            $modelUser->delete($iduser);
-
+            //$modelUser->delete($iduser);
+            $modelUser->update($iduser, [
+                'isdeleted' => '1',
+            ]);
             $json = [
                 'sukses' => 'Data berhasil dihapus',
             ];

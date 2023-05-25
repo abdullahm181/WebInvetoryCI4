@@ -153,7 +153,7 @@ class Barangmasuk extends BaseController
 
             $modelBarang = new Modelbarang();
 
-            $data = $modelBarang->tampildata_cari($cari)->get();
+            $data = $modelBarang->tampildata_cari($cari);
 
             if ($data != null) {
                 $json = [

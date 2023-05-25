@@ -10,7 +10,7 @@ class Modelsatuan extends Model
     protected $table            = 'satuan';
     protected $primaryKey       = 'satid';
     
-    protected $allowedFields    = ['satid','satnama'];
+    protected $allowedFields    = ['satid','satnama','isdeleted'];
 
     public function __construct() {
         parent::__construct();

@@ -11,7 +11,7 @@ class Satuan extends BaseController
     {
         $model = new Modelsatuan();
         $data = [
-            'tampildata' => $model->orderBy('satid', 'DESC')->findAll()
+            'tampildata' => $model->where('isdeleted !=','1')->orderBy('satid', 'DESC')->findAll()
         ];
         return view('satuan/viewsatuan', $data);
     }
@@ -25,7 +25,8 @@ class Satuan extends BaseController
           
         $data = [
             'satid' => $this->request->getVar('satid'),
-            'satnama'  => $this->request->getVar('satnama')
+            'satnama'  => $this->request->getVar('satnama'),
+            'isdeleted'=>0
             ];
         if($data['satid']==0 || $data['satid']==null ){
             //add
@@ -71,7 +72,7 @@ class Satuan extends BaseController
 
         $model = new Modelsatuan();
 
-        $data = $model->orderBy('satid', 'DESC')->findAll();
+        $data = $model->where('isdeleted !=','1')->orderBy('satid', 'DESC')->findAll();
 
         echo json_encode($data);
     }
@@ -95,7 +96,10 @@ class Satuan extends BaseController
     public function delete($id = null)
     {
         $model = new Modelsatuan();
-        $delete = $model->where('satid', $id)->delete();
+        $data = $model->where('satid', $id)->first();
+        $data['isdeleted']=1;
+        //$delete = $model->where('satid', $id)->delete();
+        $delete=$model->update($id, $data);
         if ($delete) {
             echo json_encode(array("status" => true));
         } else {

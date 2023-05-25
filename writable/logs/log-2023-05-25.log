@@ -1,0 +1,872 @@
+INFO - 2023-05-25 00:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 00:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 01:22:27 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Projek\WebInvetoryCI4\app\Controllers\Barang.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barang->index()
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#9 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#12 {main}
+CRITICAL - 2023-05-25 01:22:27 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `lokasi` ON `lokid`=`brglokid`
+WHERE `isdeleted` != \'1\'
+ORDER BY `brgid` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `lokasi` ON `lokid`=`brglokid`
+WHERE `isdeleted` != \'1\'
+ORDER BY `brgid` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `lokasi` ON `lokid`=`brglokid`
+WHERE `isdeleted` != \'1\'
+ORDER BY `brgid` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `lokasi` ON `lokid`=`brglokid`
+WHERE `isdeleted` != :isdeleted:
+ORDER BY `brgid` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Barang.php(15): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barang->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 01:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 01:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 02:57:38 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 02:57:38 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 02:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 02:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 03:08:45 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 03:08:45 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `barang`.`isdeleted` != :barang.isdeleted:
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:11:16 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:11:31 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:11:41 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:11:55 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:12:03 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:12:08 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:12:09 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:12:10 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 03:12:11 --> CodeIgniter\Database\BaseBuilder::orLike(): Argument #2 ($match) must be of type string, null given, called in D:\Projek\WebInvetoryCI4\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 1010.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->orLike('brgkode', null)
+ 2 APPPATH\Models\Modelbarang.php(49): CodeIgniter\Model->__call('orlike', [...])
+ 3 APPPATH\Controllers\Barangmasuk.php(155): App\Models\Modelbarang->tampildata_cari(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 03:12:29 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 03:12:29 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `barang`.`isdeleted` != :barang.isdeleted:
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 03:12:45 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 03:12:45 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `barang`.`isdeleted` != :barang.isdeleted:
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 03:15:35 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 03:15:35 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%aaa%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%aaa%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%aaa%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%aaa%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `barang`.`isdeleted` != :barang.isdeleted:
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-25 03:16:44 --> mysqli_sql_exception: Column 'isdeleted' in where clause is ambiguous in D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Projek\WebInvetoryCI4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Projek\WebInvetoryCI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Projek\WebInvetoryCI4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Projek\WebInvetoryCI4\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Projek\WebInvetoryCI4\app\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', Array)
+#6 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+#7 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+#8 D:\Projek\WebInvetoryCI4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Projek\WebInvetoryCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Projek\WebInvetoryCI4\system\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebIn...')
+#11 {main}
+CRITICAL - 2023-05-25 03:16:44 --> Column 'isdeleted' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%Tas%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%Tas%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `brgnama` LIKE \'%Tas%\' ESCAPE \'!\'
+OR  `katnama` LIKE \'%Tas%\' ESCAPE \'!\'
+AND `barang`.`isdeleted` != \'1\'
+AND `isdeleted` != \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`
+JOIN `kategori` ON `brgkatid`=`katid`
+JOIN `satuan` ON `brgsatid`=`satid`
+JOIN `lokasi` ON `brglokid`=`lokid`
+WHERE `brgkode` LIKE :brgkode: ESCAPE \'!\'
+OR  `brgnama` LIKE :brgnama: ESCAPE \'!\'
+OR  `katnama` LIKE :katnama: ESCAPE \'!\'
+AND `barang`.`isdeleted` != :barang.isdeleted:
+AND `isdeleted` != :isdeleted:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Barangmasuk.php(156): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 03:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 03:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 04:07:43 --> Call to a member function getResultArray() on array
+in APPPATH\Views\barangmasuk\detaildatabarang.php on line 15.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barangmasuk/detaildatabarang', [], true)
+ 4 APPPATH\Controllers\Barangmasuk.php(161): view('barangmasuk/detaildatabarang', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 04:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-25 04:11:41 --> Cannot use object of type stdClass as array
+in APPPATH\Views\barangmasuk\detaildatabarang.php on line 19.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('barangmasuk/detaildatabarang', [], true)
+ 4 APPPATH\Controllers\Barangmasuk.php(161): view('barangmasuk/detaildatabarang', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Barangmasuk->detailCariBarang()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barangmasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 04:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-05-25 04:19:02 --> [DEPRECATED] strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in SYSTEMPATH\Debug\Toolbar.php on line 416.
+ 1 SYSTEMPATH\Debug\Toolbar.php(416): strpos(null, '<head>')
+ 2 SYSTEMPATH\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+ 3 SYSTEMPATH\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), null)
+ 4 SYSTEMPATH\CodeIgniter.php(519): CodeIgniter\Filters\Filters->run('/', 'after')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Projek\\WebInvetoryCI4\\public\\index.php')
+INFO - 2023-05-25 04:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-25 04:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

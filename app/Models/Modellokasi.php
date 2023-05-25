@@ -9,7 +9,7 @@ class Modellokasi extends Model
     protected $table            = 'lokasi';
     protected $primaryKey       = 'lokid';
     
-    protected $allowedFields    = ['lokid','loklorong','lokrak','lokkode'];
+    protected $allowedFields    = ['lokid','loklorong','lokrak','lokkode','isdeleted'];
 
     public function __construct() {
         parent::__construct();

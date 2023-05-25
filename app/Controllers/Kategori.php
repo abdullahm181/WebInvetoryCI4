@@ -12,7 +12,7 @@ class Kategori extends BaseController
     {
         $model = new Modelkategori();
         $data = [
-            'tampildata' => $model->orderBy('katid', 'DESC')->findAll()
+            'tampildata' => $model->where('isdeleted !=','1')->orderBy('katid', 'DESC')->findAll()
         ];
         return view('kategori/viewkategori', $data);
     }
@@ -26,7 +26,8 @@ class Kategori extends BaseController
           
         $data = [
             'katid' => $this->request->getVar('katid'),
-            'katnama'  => $this->request->getVar('katnama')
+            'katnama'  => $this->request->getVar('katnama'),
+            'isdeleted'=>0
             ];
         if($data['katid']==0 || $data['katid']==null ){
             //add
@@ -72,7 +73,7 @@ class Kategori extends BaseController
 
         $model = new Modelkategori();
 
-        $data = $model->orderBy('katid', 'DESC')->findAll();
+        $data = $model->where('isdeleted !=','1')->orderBy('katid', 'DESC')->findAll();
 
         echo json_encode($data);
     }
@@ -96,8 +97,12 @@ class Kategori extends BaseController
     public function delete($id = null)
     {
         $model = new Modelkategori();
-        $delete = $model->where('katid', $id)->delete();
-        if ($delete) {
+        //$delete = $model->where('katid', $id)->delete();
+        $data = $model->where('katid', $id)->first();
+        $data['isdeleted']=1;
+
+        $update = $model->update($id, $data);
+        if ($update) {
             echo json_encode(array("status" => true));
         } else {
             echo json_encode(array("status" => false));

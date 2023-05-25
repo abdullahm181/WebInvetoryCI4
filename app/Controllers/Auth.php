@@ -41,7 +41,7 @@ class Auth extends BaseController
             return redirect()->to(site_url('Auth/index'));
         }else{
             $modelauth=new Modelauth();
-            $cekUserLogin = $modelauth->where('usernama', $usernama)->first();
+            $cekUserLogin = $modelauth->where('usernama', $usernama)->where('isdeleted!=','1')->first();
             //$cekUserLogin=$modelauth->find($usernama);
             if($cekUserLogin){
                 if ($cekUserLogin['useraktif'] != '1') {

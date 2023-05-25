@@ -12,7 +12,7 @@ class Barang extends BaseController
     {
         $model = new Modelbarang();
         $data = [
-            'tampildata' => $model->join('lokasi','lokid=brglokid')->orderBy('brgid', 'DESC')->findAll()
+            'tampildata' => $model->join('lokasi','lokid=brglokid')->where('barang.isdeleted !=','1')->orderBy('brgid', 'DESC')->findAll()
         ];
         return view('barang/viewbarang', $data);
     }
@@ -49,7 +49,8 @@ class Barang extends BaseController
             'brggambar' => null,
             'brgkode' => $this->request->getVar('brgkode'),
             'brgstok' => $this->request->getVar('brgstok'),
-            'brglokid'=> $this->request->getVar('brglokid')
+            'brglokid'=> $this->request->getVar('brglokid'),
+            'isdeleted'=> 0
         ];
         
         if ($data['brgid'] == 0 || $data['brgid'] == null) {
@@ -165,7 +166,7 @@ class Barang extends BaseController
 
         $model = new Modelbarang();
 
-        $data = $model->orderBy('brgid', 'DESC')->findAll();
+        $data = $model->where('isdeleted !=','1')->orderBy('brgid', 'DESC')->findAll();
 
         echo json_encode($data);
     }
@@ -190,9 +191,12 @@ class Barang extends BaseController
     {
         $model = new Modelbarang();
         $data = $model->where('brgid', $id)->first();
-        $this->delete_image($data['brggambar']);
-        $delete = $model->where('brgid', $id)->delete();
-        if ($delete) {
+        //$this->delete_image($data['brggambar']);
+        $data['isdeleted']=1;
+
+        $update = $model->update($id, $data);
+        //$delete = $model->where('brgid', $id)->delete();
+        if ($update) {
             echo json_encode(array("status" => true));
         } else {
             echo json_encode(array("status" => false));

@@ -8,7 +8,7 @@ class Modeluser extends Model
 {
     protected $table            = 'users';
     protected $primaryKey       = 'userid';
-    protected $allowedFields    = ['userid', 'usernama', 'usernamalengkap','userpassword', 'userlevelid', 'useraktif'];
+    protected $allowedFields    = ['userid', 'usernama', 'usernamalengkap','userpassword', 'userlevelid', 'useraktif','isdeleted'];
     protected $dt;
 
     private function _get_datatables_query()
